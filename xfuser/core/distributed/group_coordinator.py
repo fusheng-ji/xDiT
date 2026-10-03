@@ -231,6 +231,7 @@ class GroupCoordinator:
         if dim < 0:
             # Convert negative dim to positive.
             dim += input_.dim()
+        input_ = input_.contiguous()
         # Allocate output tensor.
         input_size = list(input_.size())
         input_size[0] *= world_size
