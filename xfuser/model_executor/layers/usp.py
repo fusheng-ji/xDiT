@@ -79,6 +79,8 @@ def ring_attn(
         "is_causal": is_causal,
         "joint_attn_kwargs": joint_attn_kwargs,
         "attention_kwargs": attention_kwargs,
+        # Each step's output is merged on its log-sum-exp.
+        "return_lse": True,
     }
     if version_at_least(torch.__version__, "2.6.0"):
         from torch.distributed.tensor.experimental._attention import _cp_options
@@ -420,7 +422,7 @@ def _spec_adapter(spec):
     testable without an initialised process group.
     """
 
-    def call(query, key, value, dropout_p=0.0, is_causal=False, attention_kwargs=None):
+    def call(query, key, value, dropout_p=0.0, is_causal=False, attention_kwargs=None, return_lse=False):
         kwargs = attention_kwargs if attention_kwargs is not None else {}
         ulysses_world_size, ring_world_size = _parallel_degrees()
         return spec.run(
@@ -433,6 +435,7 @@ def _spec_adapter(spec):
                 varlen=VarlenPacking.from_kwargs(kwargs),
                 ulysses_world_size=ulysses_world_size,
                 ring_world_size=ring_world_size,
+                return_lse=return_lse,
                 attention_kwargs=kwargs,
             ),
         )
@@ -467,7 +470,15 @@ def concat_joint_tensors_decorator(func):
                 value = _concat_joint_tensor(value, joint_value, joint_strategy, dim=2)
             joint_attn_kwargs["step"] = step + 1  # In place increment step
 
-        return func(query, key, value, dropout_p=dropout_p, is_causal=is_causal, attention_kwargs=attention_kwargs)
+        return func(
+            query,
+            key,
+            value,
+            dropout_p=dropout_p,
+            is_causal=is_causal,
+            attention_kwargs=attention_kwargs,
+            return_lse=kwargs.get("return_lse", False),
+        )
 
     return wrapper
 

@@ -121,6 +121,11 @@ class AttnCall:
     ulysses_world_size: int = 1
     ring_world_size: int = 1
 
+    # Whether the caller needs the softmax log-sum-exp. Ring attention sets it,
+    # since it merges each step's partial output on it; kernels that compute
+    # one only on request skip it otherwise.
+    return_lse: bool = False
+
     attention_kwargs: dict = field(default_factory=dict)
 
 
