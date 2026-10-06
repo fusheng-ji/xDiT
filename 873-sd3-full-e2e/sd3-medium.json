@@ -1,0 +1,4818 @@
+{
+  "quality_review": {
+    "limitation": "This is a visual spot check and numerical parity test, not a broad image-quality benchmark.",
+    "observation": "Fox, mountain lake, pine trees and warm sunlight are visible; no blank or corrupted outputs, and the xDiT images preserve the stock composition.",
+    "reviewed": true,
+    "scope": "One 1024x1024 prompt and seed per model, across the five modes."
+  },
+  "runs": {
+    "cfg": [
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "quality",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "time_shift_type",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "max_shift",
+                "use_karras_sigmas",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 27.637294445186853,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "use_beta_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "max_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 35.91179225221276,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "use_beta_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "max_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 23.482062367722392,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "use_beta_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "max_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 20.867213863879442,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "use_beta_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "max_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 20.17813423089683,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "peak_allocated_bytes": 21951367168,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "time_shift_type",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "max_shift",
+                "use_karras_sigmas",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 21.278918031603098,
+            "t5_input_lengths": [
+              63,
+              63
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "peak_allocated_bytes": 21951399936,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "time_shift_type",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "max_shift",
+                "use_karras_sigmas",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 20.766834992915392,
+            "t5_input_lengths": [
+              64,
+              64
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "use_beta_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "max_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 20.355237904936075,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 8.003601724281907,
+        "mode": "cfg",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 0,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      },
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999576933,
+              "image_mae": 1.902329245240253e-06,
+              "max_abs": 0.00035449862480163574,
+              "relative_l2": 9.194248599335313e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-quality.png",
+            "image_spatial_std": 0.21165601909160614,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "quality",
+            "output_rank": 1,
+            "peak_allocated_bytes": 139277236736,
+            "peak_reserved_bytes": 139322195968,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "base_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "shift_terminal",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "invert_sigmas",
+                "use_dynamic_shifting"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 33.86507098376751,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999997468534,
+              "image_mae": 5.129770215717144e-06,
+              "max_abs": 0.0004627704620361328,
+              "relative_l2": 2.276875827424811e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-sigmas_3_requested_2.png",
+            "image_spatial_std": 0.15259023010730743,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 39.7380915209651,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.999999998094184,
+              "image_mae": 1.1229640222154558e-05,
+              "max_abs": 0.0021729469299316406,
+              "relative_l2": 6.17456688646681e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-sigmas_5_requested_3.png",
+            "image_spatial_std": 0.20586033165454865,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 25.62008073925972,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "comparison": {
+              "cosine": 0.9999999999103163,
+              "image_mae": 4.0047757465799805e-06,
+              "max_abs": 9.073317050933838e-05,
+              "relative_l2": 1.3404698741422667e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-dynamic_default_mu.png",
+            "image_spatial_std": 0.14898650348186493,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.33829750865698,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "comparison": {
+              "cosine": 0.9999999999371616,
+              "image_mae": 3.8184675759112e-06,
+              "max_abs": 8.285045623779297e-05,
+              "relative_l2": 1.1572835524615903e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-dynamic_explicit_mu.png",
+            "image_spatial_std": 0.1460794061422348,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 23.097956309095025,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999708673,
+              "image_mae": 3.0154035357554676e-06,
+              "max_abs": 7.534027099609375e-05,
+              "relative_l2": 8.030622981732258e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-text_length_63.png",
+            "image_spatial_std": 0.14987649023532867,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21951367168,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "base_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "shift_terminal",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "invert_sigmas",
+                "use_dynamic_shifting"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.613355062901974,
+            "t5_input_lengths": [
+              63,
+              63
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999742514,
+              "image_mae": 2.61583159044676e-06,
+              "max_abs": 8.58306884765625e-05,
+              "relative_l2": 7.464560918716153e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-text_length_64.png",
+            "image_spatial_std": 0.13944660127162933,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21951399936,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "base_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "shift_terminal",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "invert_sigmas",
+                "use_dynamic_shifting"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.226024068892002,
+            "t5_input_lengths": [
+              64,
+              64
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "comparison": {
+              "cosine": 0.9999999990316736,
+              "image_mae": 1.26824497783673e-05,
+              "max_abs": 0.0012098848819732666,
+              "relative_l2": 4.411982363222939e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "cfg-custom_timesteps.png",
+            "image_spatial_std": 0.1929863691329956,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_shift",
+                "use_exponential_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.271156206727028,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 7.748474298045039,
+        "mode": "cfg",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 1,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      }
+    ],
+    "naive": [
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999509,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-quality.png",
+            "image_spatial_std": 0.211655855178833,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "quality",
+            "output_rank": 0,
+            "peak_allocated_bytes": 139287763456,
+            "peak_reserved_bytes": 139338973184,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 36.28472313657403,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999345,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-sigmas_3_requested_2.png",
+            "image_spatial_std": 0.15259066224098206,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 24.35841204226017,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999417,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-sigmas_5_requested_3.png",
+            "image_spatial_std": 0.20585918426513672,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 33.49573031626642,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "comparison": {
+              "cosine": 0.999999999999953,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-dynamic_default_mu.png",
+            "image_spatial_std": 0.14898712933063507,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 23.02331442758441,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999492,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-dynamic_explicit_mu.png",
+            "image_spatial_std": 0.14607980847358704,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.27332716435194,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999704,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-text_length_63.png",
+            "image_spatial_std": 0.14987587928771973,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21951366144,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 36.66091249138117,
+            "t5_input_lengths": [
+              63,
+              63
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.999999999999959,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-text_length_64.png",
+            "image_spatial_std": 0.13944654166698456,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21951398912,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 35.16259991750121,
+            "t5_input_lengths": [
+              64,
+              64
+            ],
+            "tolerances": {
+              "cosine_min": 0.999999,
+              "image_mae": 1e-05,
+              "relative_l2": 1e-05
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "comparison": {
+              "cosine": 0.9999999999999409,
+              "image_mae": 0.0,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "naive-custom_timesteps.png",
+            "image_spatial_std": 0.19298814237117767,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "shift_terminal",
+                "base_image_seq_len",
+                "use_beta_sigmas",
+                "time_shift_type",
+                "max_shift",
+                "invert_sigmas",
+                "max_image_seq_len",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "base_shift"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 26.8020245321095,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 7.347991501912475,
+        "mode": "naive",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 0,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 1
+      }
+    ],
+    "pipefusion_sync": [
+      {
+        "cases": [
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "quality",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 43.101614471524954,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "peak_allocated_bytes": 21959788544,
+            "peak_reserved_bytes": 22024290304,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "use_exponential_sigmas",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 45.125130258500576,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "peak_allocated_bytes": 21959788544,
+            "peak_reserved_bytes": 22024290304,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "use_exponential_sigmas",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 34.16367585584521,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "peak_allocated_bytes": 21959788544,
+            "peak_reserved_bytes": 22024290304,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "use_exponential_sigmas",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 30.836221925914288,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "peak_allocated_bytes": 21959788544,
+            "peak_reserved_bytes": 22024290304,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "use_exponential_sigmas",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 29.754979459568858,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "peak_allocated_bytes": 21954099200,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 28.53466248139739,
+            "t5_input_lengths": [
+              63,
+              63
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "peak_allocated_bytes": 21954115584,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 29.694916689768434,
+            "t5_input_lengths": [
+              64,
+              64
+            ]
+          },
+          {
+            "callback_steps": [],
+            "callback_timesteps": [],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "peak_allocated_bytes": 21961197568,
+            "peak_reserved_bytes": 22024290304,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "shift_terminal",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "base_shift",
+                "time_shift_type",
+                "stochastic_sampling",
+                "max_shift",
+                "use_beta_sigmas",
+                "use_karras_sigmas",
+                "use_exponential_sigmas",
+                "max_image_seq_len"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 31.03232372365892,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 8.0811706520617,
+        "mode": "pipefusion_sync",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 0,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      },
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999998593466,
+              "image_mae": 2.33362288781791e-06,
+              "max_abs": 0.001440301537513733,
+              "relative_l2": 1.677164858938808e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-quality.png",
+            "image_spatial_std": 0.21165597438812256,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "quality",
+            "output_rank": 1,
+            "peak_allocated_bytes": 139337456128,
+            "peak_reserved_bytes": 139389304832,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 48.332308208569884,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999892639,
+              "image_mae": 1.8802629710990004e-06,
+              "max_abs": 6.186962127685547e-05,
+              "relative_l2": 4.619528487184964e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-sigmas_3_requested_2.png",
+            "image_spatial_std": 0.15259070694446564,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 47.68881908431649,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999547386,
+              "image_mae": 3.027806315003545e-06,
+              "max_abs": 0.0003209114074707031,
+              "relative_l2": 9.51085532024254e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-sigmas_5_requested_3.png",
+            "image_spatial_std": 0.20585936307907104,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 35.95945912785828,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "comparison": {
+              "cosine": 0.9999999999921251,
+              "image_mae": 1.687957933427242e-06,
+              "max_abs": 4.836916923522949e-05,
+              "relative_l2": 3.955684681622662e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-dynamic_default_mu.png",
+            "image_spatial_std": 0.14898715913295746,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.80035702325404,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "comparison": {
+              "cosine": 0.999999999994869,
+              "image_mae": 1.6100108268801705e-06,
+              "max_abs": 3.0219554901123047e-05,
+              "relative_l2": 3.1873913553401047e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-dynamic_explicit_mu.png",
+            "image_spatial_std": 0.14607979357242584,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 31.74334729090333,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999934696,
+              "image_mae": 1.6364007251468138e-06,
+              "max_abs": 2.6226043701171875e-05,
+              "relative_l2": 3.606475423592745e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-text_length_63.png",
+            "image_spatial_std": 0.1498759537935257,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21951367168,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 30.349338799715042,
+            "t5_input_lengths": [
+              63,
+              63
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999930356,
+              "image_mae": 1.5771564676470007e-06,
+              "max_abs": 3.314018249511719e-05,
+              "relative_l2": 3.717703851959221e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-text_length_64.png",
+            "image_spatial_std": 0.13944657146930695,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21951399936,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "use_dynamic_shifting",
+                "base_image_seq_len",
+                "stochastic_sampling",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.65760402567685,
+            "t5_input_lengths": [
+              64,
+              64
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "comparison": {
+              "cosine": 0.9999999999643658,
+              "image_mae": 3.5345258311281214e-06,
+              "max_abs": 0.0002250075340270996,
+              "relative_l2": 8.436924382750665e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "pipefusion_sync-custom_timesteps.png",
+            "image_spatial_std": 0.192988321185112,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "max_image_seq_len",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "base_shift",
+                "max_shift",
+                "shift_terminal",
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "time_shift_type"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.346972461789846,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 7.904723949730396,
+        "mode": "pipefusion_sync",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 1,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      }
+    ],
+    "stock": [
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-quality.png",
+            "image_spatial_std": 0.211655855178833,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "quality",
+            "output_rank": 0,
+            "peak_allocated_bytes": 139287763456,
+            "peak_reserved_bytes": 139338973184,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "base_image_seq_len",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_dynamic_shifting",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 34.18937116675079,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-sigmas_3_requested_2.png",
+            "image_spatial_std": 0.15259066224098206,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 26.925876583904028,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-sigmas_5_requested_3.png",
+            "image_spatial_std": 0.20585918426513672,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 23.9129173271358,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-dynamic_default_mu.png",
+            "image_spatial_std": 0.14898712933063507,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.589635470882058,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-dynamic_explicit_mu.png",
+            "image_spatial_std": 0.14607980847358704,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.84459309093654,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-text_length_63.png",
+            "image_spatial_std": 0.14987587928771973,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21951366144,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "base_image_seq_len",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_dynamic_shifting",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 22.639244196936488,
+            "t5_input_lengths": [
+              63,
+              63
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-text_length_64.png",
+            "image_spatial_std": 0.13944654166698456,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21951398912,
+            "peak_reserved_bytes": 22026387456,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "base_image_seq_len",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "use_dynamic_shifting",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 21.314599242061377,
+            "t5_input_lengths": [
+              64,
+              64
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "guidance_scale": 5.0,
+            "image_path": "stock-custom_timesteps.png",
+            "image_spatial_std": 0.19298814237117767,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "output_rank": 0,
+            "peak_allocated_bytes": 21958042624,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_exponential_sigmas",
+                "use_beta_sigmas",
+                "base_shift",
+                "shift_terminal",
+                "max_image_seq_len",
+                "max_shift",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "stochastic_sampling",
+                "base_image_seq_len",
+                "invert_sigmas"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 21.302739031612873,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 7.707201374694705,
+        "mode": "stock",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 0,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 1
+      }
+    ],
+    "ulysses": [
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "quality",
+            "peak_allocated_bytes": 21958043648,
+            "peak_reserved_bytes": 22020096000,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_dynamic_shifting",
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "use_exponential_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.357555475085974,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "max_shift",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 32.03926155902445,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "max_shift",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 21.754763519391418,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "max_shift",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 19.262853695079684,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "max_shift",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 19.609640557318926,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "peak_allocated_bytes": 21953464320,
+            "peak_reserved_bytes": 22028484608,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_dynamic_shifting",
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "use_exponential_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 18.683746963739395,
+            "t5_input_lengths": [
+              63,
+              63
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "peak_allocated_bytes": 21953497088,
+            "peak_reserved_bytes": 22028484608,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "use_dynamic_shifting",
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_shift",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "use_exponential_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 19.298643758520484,
+            "t5_input_lengths": [
+              64,
+              64
+            ]
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "guidance_scale": 5.0,
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "time_shift_type",
+                "use_beta_sigmas",
+                "base_image_seq_len",
+                "max_image_seq_len",
+                "max_shift",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "invert_sigmas",
+                "stochastic_sampling",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 19.06808633171022,
+            "t5_input_lengths": [
+              256,
+              256
+            ]
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 10.34121024608612,
+        "mode": "ulysses",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 0,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      },
+      {
+        "cases": [
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "callback_timesteps": [
+              1000.0,
+              981.8745727539062,
+              962.3856811523438,
+              941.3732299804688,
+              918.6515502929688,
+              894.0030517578125,
+              867.1719360351562,
+              837.854736328125,
+              805.6892700195312,
+              770.2391967773438,
+              730.9743041992188,
+              687.243896484375,
+              638.2401123046875,
+              582.947998046875,
+              520.0741577148438,
+              447.94427490234375,
+              364.3522033691406,
+              266.3297119140625,
+              149.7872314453125,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999998593466,
+              "image_mae": 2.33362288781791e-06,
+              "max_abs": 0.001440301537513733,
+              "relative_l2": 1.677164858938808e-05
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-quality.png",
+            "image_spatial_std": 0.21165597438812256,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "quality",
+            "output_rank": 1,
+            "peak_allocated_bytes": 139283569152,
+            "peak_reserved_bytes": 139338973184,
+            "requested_steps": 20,
+            "resolution": 1024,
+            "runtime_steps": 20,
+            "schedule_steps": 20,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 39.100915279239416,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              874.9999389648438,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999892639,
+              "image_mae": 1.8802629710990004e-06,
+              "max_abs": 6.186962127685547e-05,
+              "relative_l2": 4.619528487184964e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-sigmas_3_requested_2.png",
+            "image_spatial_std": 0.15259070694446564,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_3_requested_2",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "max_image_seq_len",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 43.53811205364764,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "callback_timesteps": [
+              1000.0,
+              944.4444580078125,
+              874.9999389648438,
+              785.7144165039062,
+              666.6666870117188
+            ],
+            "comparison": {
+              "cosine": 0.9999999999547386,
+              "image_mae": 3.027806315003545e-06,
+              "max_abs": 0.0003209114074707031,
+              "relative_l2": 9.51085532024254e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-sigmas_5_requested_3.png",
+            "image_spatial_std": 0.20585936307907104,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "sigmas_5_requested_3",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 5,
+            "schedule_steps": 5,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "max_image_seq_len",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 31.583978505805135,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              759.8760375976562,
+              3.1513917446136475
+            ],
+            "comparison": {
+              "cosine": 0.9999999999921251,
+              "image_mae": 1.687957933427242e-06,
+              "max_abs": 4.836916923522949e-05,
+              "relative_l2": 3.955684681622662e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-dynamic_default_mu.png",
+            "image_spatial_std": 0.14898715913295746,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_default_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "max_image_seq_len",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 27.557491855695844,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              574.931396484375,
+              1.3493868112564087
+            ],
+            "comparison": {
+              "cosine": 0.999999999994869,
+              "image_mae": 1.6100108268801705e-06,
+              "max_abs": 3.0219554901123047e-05,
+              "relative_l2": 3.1873913553401047e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-dynamic_explicit_mu.png",
+            "image_spatial_std": 0.14607979357242584,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "dynamic_explicit_mu",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "max_image_seq_len",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": true,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 26.711110031232238,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999800291,
+              "image_mae": 2.3862774014560273e-06,
+              "max_abs": 0.00010478496551513672,
+              "relative_l2": 6.314789396376332e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-text_length_63.png",
+            "image_spatial_std": 0.14987607300281525,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 63,
+            "name": "text_length_63",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21953464320,
+            "peak_reserved_bytes": 22028484608,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 25.402871714904904,
+            "t5_input_lengths": [
+              63,
+              63
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              751.12109375,
+              8.928571701049805
+            ],
+            "comparison": {
+              "cosine": 0.9999999999930356,
+              "image_mae": 1.5771564676470007e-06,
+              "max_abs": 3.314018249511719e-05,
+              "relative_l2": 3.717703851959221e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-text_length_64.png",
+            "image_spatial_std": 0.13944657146930695,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 64,
+            "name": "text_length_64",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21953497088,
+            "peak_reserved_bytes": 22028484608,
+            "requested_steps": 3,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_dynamic_shifting",
+                "max_image_seq_len",
+                "use_karras_sigmas",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 24.85252533853054,
+            "t5_input_lengths": [
+              64,
+              64
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          },
+          {
+            "callback_steps": [
+              0,
+              1,
+              2
+            ],
+            "callback_timesteps": [
+              1000.0,
+              923.0769653320312,
+              818.1818237304688
+            ],
+            "comparison": {
+              "cosine": 0.9999999999643658,
+              "image_mae": 3.5345258311281214e-06,
+              "max_abs": 0.0002250075340270996,
+              "relative_l2": 8.436924382750665e-06
+            },
+            "failures": [],
+            "guidance_scale": 5.0,
+            "image_path": "ulysses-custom_timesteps.png",
+            "image_spatial_std": 0.192988321185112,
+            "latent_shape": [
+              1,
+              16,
+              128,
+              128
+            ],
+            "max_sequence_length": 256,
+            "name": "custom_timesteps",
+            "output_rank": 1,
+            "peak_allocated_bytes": 21960140800,
+            "peak_reserved_bytes": 22022193152,
+            "requested_steps": 2,
+            "resolution": 1024,
+            "runtime_steps": 3,
+            "schedule_steps": 3,
+            "scheduler_config": {
+              "_class_name": "FlowMatchEulerDiscreteScheduler",
+              "_diffusers_version": "0.29.0.dev0",
+              "_use_default_values": [
+                "stochastic_sampling",
+                "use_beta_sigmas",
+                "use_exponential_sigmas",
+                "use_karras_sigmas",
+                "max_image_seq_len",
+                "time_shift_type",
+                "base_image_seq_len",
+                "invert_sigmas",
+                "max_shift",
+                "base_shift",
+                "shift_terminal"
+              ],
+              "base_image_seq_len": 256,
+              "base_shift": 0.5,
+              "invert_sigmas": false,
+              "max_image_seq_len": 4096,
+              "max_shift": 1.15,
+              "num_train_timesteps": 1000,
+              "shift": 3.0,
+              "shift_terminal": null,
+              "stochastic_sampling": false,
+              "time_shift_type": "exponential",
+              "use_beta_sigmas": false,
+              "use_dynamic_shifting": false,
+              "use_exponential_sigmas": false,
+              "use_karras_sigmas": false
+            },
+            "seconds": 24.178444650024176,
+            "t5_input_lengths": [
+              256,
+              256
+            ],
+            "tolerances": {
+              "cosine_min": 0.99999999,
+              "image_mae": 0.0001,
+              "relative_l2": 0.0001
+            }
+          }
+        ],
+        "classification": "full_pretrained",
+        "cuda": "13.0",
+        "device": "NVIDIA B200",
+        "diffusers": "0.40.0",
+        "dtype": "float32",
+        "hip": null,
+        "load_seconds": 10.810204941779375,
+        "mode": "ulysses",
+        "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+        "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+        "negative_prompt": "blurry, distorted, low quality, text, watermark",
+        "offload": "model_cpu_offload",
+        "prompt": "A red fox sitting beside a clear mountain lake, pine trees, warm morning sunlight, detailed photograph",
+        "rank": 1,
+        "seed": 42,
+        "status": "passed",
+        "torch": "2.12.0+cu130",
+        "transformer_parameters": 2028328000,
+        "world_size": 2
+      }
+    ]
+  },
+  "settings": {
+    "allow_tiny": false,
+    "classification": "full_pretrained",
+    "dtype": "float32",
+    "guidance_scale": 5.0,
+    "model_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+    "model_revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+    "quality_steps": 20,
+    "timeout_seconds": 3600
+  },
+  "status": "passed"
+}
