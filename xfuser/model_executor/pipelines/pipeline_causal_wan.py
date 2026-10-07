@@ -331,6 +331,20 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             num_frames = num_frames // self.vae_scale_factor_temporal * self.vae_scale_factor_temporal + 1
         num_frames = max(num_frames, 1)
 
+        # Without a local attention window nothing is evicted from the self-attention
+        # KV cache, which holds `sliding_window_num_frames` latent frames.
+        num_latent_frames = (
+            latents.shape[2] if latents is not None else (num_frames - 1) // self.vae_scale_factor_temporal + 1
+        )
+        if local_attn_size == -1 and num_latent_frames > sliding_window_num_frames:
+            max_num_frames = (sliding_window_num_frames - 1) * self.vae_scale_factor_temporal + 1
+            raise ValueError(
+                f"Causal Wan generates {num_latent_frames} latent frames, but the KV cache holds "
+                f"`sliding_window_num_frames={sliding_window_num_frames}` latent frames and "
+                f"`local_attn_size=-1` disables eviction. Use `num_frames <= {max_num_frames}`, "
+                "or set `local_attn_size` to enable a sliding attention window."
+            )
+
         if self.config.boundary_ratio is not None and guidance_scale_2 is None:
             guidance_scale_2 = guidance_scale
 
