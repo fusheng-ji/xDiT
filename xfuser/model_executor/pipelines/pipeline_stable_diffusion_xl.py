@@ -1,5 +1,4 @@
-from typing import Any, Callable, Dict, List, Optional, Tuple, Union
-import torch
+from typing import Optional, Union
 import os
 from xfuser.model_executor.patch.unet_patch import apply_unet_cfg_parallel_monkey_patch
 
@@ -8,8 +7,9 @@ from xfuser.model_executor.pipelines.base_pipeline import xFuserPipelineBaseWrap
 from xfuser.core.distributed import (
     get_classifier_free_guidance_world_size,
 )
-from xfuser.config import EngineConfig, InputConfig
+from xfuser.config import EngineConfig
 from xfuser.model_executor.pipelines.register import xFuserPipelineWrapperRegister
+
 
 @xFuserPipelineWrapperRegister.register(StableDiffusionXLPipeline)
 class xFuserStableDiffusionXLPipeline(xFuserPipelineBaseWrapper):
@@ -17,7 +17,7 @@ class xFuserStableDiffusionXLPipeline(xFuserPipelineBaseWrapper):
         super().__init__(pipeline=pipeline, engine_config=engine_config)
         if get_classifier_free_guidance_world_size() == 2:
             self.module = apply_unet_cfg_parallel_monkey_patch(self.module)
-        
+
     @classmethod
     def from_pretrained(
         cls,
@@ -26,9 +26,7 @@ class xFuserStableDiffusionXLPipeline(xFuserPipelineBaseWrapper):
         return_org_pipeline: bool = False,
         **kwargs,
     ):
-        pipeline = StableDiffusionXLPipeline.from_pretrained(
-            pretrained_model_name_or_path, **kwargs
-        )
+        pipeline = StableDiffusionXLPipeline.from_pretrained(pretrained_model_name_or_path, **kwargs)
         if return_org_pipeline:
             return pipeline
         return cls(pipeline, engine_config)
