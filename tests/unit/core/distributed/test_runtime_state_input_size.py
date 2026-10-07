@@ -35,8 +35,22 @@ def test_switching_to_row_split_revalidates_an_unchanged_size(flux_runtime_state
 def test_row_split_metadata_follows_the_requested_height(flux_runtime_state):
     state = flux_runtime_state(sp_degree=3)
 
-    state.set_input_parameters(height=1056, width=1056, batch_size=1, split_latents_by_rows=False)
+    state.set_input_parameters(height=1056, width=1056, batch_size=1)
 
     # 66 token rows over 3 ranks.
     assert state.pp_patches_height == [22]
     assert state.pp_patches_token_num == [22 * 66]
+
+
+def test_token_sharding_callers_accept_heights_whose_row_patches_would_be_uneven(flux_runtime_state):
+    # Krea-2 geometry: 8 pixels per latent row and 2x2 patches. 1040 pixels is
+    # 130 latent rows, which 2 ranks can share, but 65 rows each is not a whole
+    # number of patch rows, so only a row split would have to reject it.
+    state = flux_runtime_state(sp_degree=2)
+    state.vae_scale_factor = 8
+    state.backbone_patch_size = 2
+
+    state.set_input_parameters(height=1040, width=1040, batch_size=1, split_latents_by_rows=False)
+
+    assert (state.input_config.height, state.input_config.width) == (1040, 1040)
+    assert state.pp_patches_height is None
