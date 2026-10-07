@@ -54,6 +54,11 @@ def krea2():
             return_value=single_rank,
         ),
         mock.patch.object(transformer_krea2, "USP", _masked_attention),
+        mock.patch.object(
+            transformer_krea2,
+            "get_runtime_state",
+            return_value=SimpleNamespace(increment_step_counter=lambda: None),
+        ),
     ):
         yield model
 
