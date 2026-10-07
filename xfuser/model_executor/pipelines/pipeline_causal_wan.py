@@ -21,7 +21,6 @@ logger = logging.get_logger(__name__)
 
 
 class xFuserCausalWanPipeline(WanImageToVideoPipeline):
-
     def prepare_latents(
         self,
         batch_size: int,
@@ -69,13 +68,9 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         guidance_scale_2=None,
     ):
         if guidance_scale is not None and guidance_scale > 0:
-            raise ValueError(
-                "CFG is not supported for causal WAN. Please set guidance_scale to 0."
-            )
+            raise ValueError("CFG is not supported for causal WAN. Please set guidance_scale to 0.")
         if image is not None and image_embeds is not None:
-            raise ValueError(
-                "Cannot forward both `image` and `image_embeds`. Please provide only one."
-            )
+            raise ValueError("Cannot forward both `image` and `image_embeds`. Please provide only one.")
         if height % 16 != 0 or width % 16 != 0:
             raise ValueError(f"`height` and `width` have to be divisible by 16 but are {height} and {width}.")
 
@@ -95,9 +90,13 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             raise ValueError(f"`prompt` has to be of type `str` or `list` but is {type(prompt)}")
 
         if negative_prompt is not None and negative_prompt_embeds is not None:
-            raise ValueError("Cannot forward both `negative_prompt` and `negative_prompt_embeds`. Please provide only one.")
+            raise ValueError(
+                "Cannot forward both `negative_prompt` and `negative_prompt_embeds`. Please provide only one."
+            )
 
-    def _compute_block_sizes(self, num_latent_frames: int, num_frames_per_block: int, boundary_timestep: float) -> List[int]:
+    def _compute_block_sizes(
+        self, num_latent_frames: int, num_frames_per_block: int, boundary_timestep: float
+    ) -> List[int]:
         """
         Compute the sizes of the blocks to process.
         """
@@ -112,7 +111,9 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             block_sizes[0] = 1
         return block_sizes
 
-    def _compute_dmd_timesteps(self, dmd_denoising_steps: List[int], boundary_timestep: float, flow_shift: float, device: torch.device) -> Tuple[torch.Tensor, int, torch.Tensor]:
+    def _compute_dmd_timesteps(
+        self, dmd_denoising_steps: List[int], boundary_timestep: float, flow_shift: float, device: torch.device
+    ) -> Tuple[torch.Tensor, int, torch.Tensor]:
         """
         Compute DMD timesteps, number of high-noise steps, and sigma boundary.
         """
@@ -134,10 +135,12 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
 
         # Warp DMD timesteps through the shifted schedule
         raw_dmd_timesteps = torch.tensor(dmd_denoising_steps, dtype=torch.long)
-        scheduler_timesteps = torch.cat((
-            init_timesteps,
-            torch.tensor([0], dtype=torch.float32),
-        ))
+        scheduler_timesteps = torch.cat(
+            (
+                init_timesteps,
+                torch.tensor([0], dtype=torch.float32),
+            )
+        )
         dmd_timesteps = scheduler_timesteps[1000 - raw_dmd_timesteps].to(device)
 
         # Precompute which DMD timesteps are in the high-noise regime
@@ -150,7 +153,17 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
 
         return dmd_timesteps, num_high_noise_steps, sigma_boundary
 
-    def _build_causal_attn_args(self, current_kv_cache, crossattn_cache, start_idx, frame_seq_length, local_attn_size, sink_size, max_attention_size, attention_kwargs):
+    def _build_causal_attn_args(
+        self,
+        current_kv_cache,
+        crossattn_cache,
+        start_idx,
+        frame_seq_length,
+        local_attn_size,
+        sink_size,
+        max_attention_size,
+        attention_kwargs,
+    ):
         """
         Build causal attention argument dictionary.
         """
@@ -178,18 +191,22 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         """Initialize per-layer KV caches for causal self-attention."""
         kv_cache = []
         for _ in range(num_blocks):
-            kv_cache.append({
-                "k": torch.zeros(
-                    [batch_size, kv_cache_size, num_heads, head_dim],
-                    dtype=dtype, device=device,
-                ),
-                "v": torch.zeros(
-                    [batch_size, kv_cache_size, num_heads, head_dim],
-                    dtype=dtype, device=device,
-                ),
-                "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
-                "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
-            })
+            kv_cache.append(
+                {
+                    "k": torch.zeros(
+                        [batch_size, kv_cache_size, num_heads, head_dim],
+                        dtype=dtype,
+                        device=device,
+                    ),
+                    "v": torch.zeros(
+                        [batch_size, kv_cache_size, num_heads, head_dim],
+                        dtype=dtype,
+                        device=device,
+                    ),
+                    "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
+                    "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
+                }
+            )
         return kv_cache
 
     def _initialize_crossattn_cache(
@@ -205,17 +222,21 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         """Initialize per-layer cross-attention caches."""
         crossattn_cache = []
         for _ in range(num_blocks):
-            crossattn_cache.append({
-                "k": torch.zeros(
-                    [batch_size, max_text_len, num_heads, head_dim],
-                    dtype=dtype, device=device,
-                ),
-                "v": torch.zeros(
-                    [batch_size, max_text_len, num_heads, head_dim],
-                    dtype=dtype, device=device,
-                ),
-                "is_init": False,
-            })
+            crossattn_cache.append(
+                {
+                    "k": torch.zeros(
+                        [batch_size, max_text_len, num_heads, head_dim],
+                        dtype=dtype,
+                        device=device,
+                    ),
+                    "v": torch.zeros(
+                        [batch_size, max_text_len, num_heads, head_dim],
+                        dtype=dtype,
+                        device=device,
+                    ),
+                    "is_init": False,
+                }
+            )
         return crossattn_cache
 
     def _get_sigma_for_timestep(self, scheduler, timestep):
@@ -226,9 +247,7 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         timestep = timestep.double()
         if timestep.ndim == 0:
             timestep = timestep.unsqueeze(0)
-        timestep_id = torch.argmin(
-            (timesteps.unsqueeze(0) - timestep.unsqueeze(1)).abs(), dim=1
-        )
+        timestep_id = torch.argmin((timesteps.unsqueeze(0) - timestep.unsqueeze(1)).abs(), dim=1)
         return sigmas[timestep_id]
 
     def _pred_noise_to_pred_video(self, noise_pred, noisy, sigma):
@@ -266,7 +285,7 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         sigma = sigma.reshape(-1, 1, 1, 1).double()
         sigma_boundary = sigma_boundary.reshape(-1, 1, 1, 1).double()
         alpha = (1 - sigma) / (1 - sigma_boundary)
-        beta = torch.sqrt(sigma ** 2 - (alpha * sigma_boundary) ** 2)
+        beta = torch.sqrt(sigma**2 - (alpha * sigma_boundary) ** 2)
         return (alpha * clean.double() + beta * noise.double()).to(clean.dtype)
 
     @torch.no_grad()
@@ -307,7 +326,6 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
     ):
         if isinstance(callback_on_step_end, (PipelineCallback, MultiPipelineCallbacks)):
             callback_on_step_end_tensor_inputs = callback_on_step_end.tensor_inputs
-
 
         # 1. Check inputs. Raise error if not correct
         self.check_inputs(
@@ -406,7 +424,9 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
         # 5. Compute frame sequence length for cache sizing
         p_t, p_h, p_w = self.transformer.config.patch_size
         num_latent_frames = (num_frames - 1) // self.vae_scale_factor_temporal + 1
-        frame_seq_length = (height // (self.vae_scale_factor_spatial * p_h)) * (width // (self.vae_scale_factor_spatial * p_w))
+        frame_seq_length = (height // (self.vae_scale_factor_spatial * p_h)) * (
+            width // (self.vae_scale_factor_spatial * p_w)
+        )
 
         # 6. Initialize caches
         num_transformer_blocks = len(self.transformer.blocks)
@@ -425,13 +445,13 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             device=device,
         )
         kv_cache_2 = self._initialize_kv_cache(
-                batch_size=batch_size,
-                num_blocks=num_transformer_blocks,
-                num_heads=num_heads,
-                head_dim=head_dim,
-                kv_cache_size=kv_cache_size,
-                dtype=transformer_dtype,
-                device=device,
+            batch_size=batch_size,
+            num_blocks=num_transformer_blocks,
+            num_heads=num_heads,
+            head_dim=head_dim,
+            kv_cache_size=kv_cache_size,
+            dtype=transformer_dtype,
+            device=device,
         )
         crossattn_cache = self._initialize_crossattn_cache(
             batch_size=batch_size,
@@ -447,7 +467,9 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
 
         # 7. Setup blocks and DMD
         block_sizes = self._compute_block_sizes(num_latent_frames, num_frames_per_block, boundary_timestep)
-        dmd_timesteps, num_high_noise_steps, sigma_boundary = self._compute_dmd_timesteps(dmd_denoising_steps, boundary_timestep, flow_shift, device)
+        dmd_timesteps, num_high_noise_steps, sigma_boundary = self._compute_dmd_timesteps(
+            dmd_denoising_steps, boundary_timestep, flow_shift, device
+        )
 
         # 7b. First-frame KV cache seeding for i2v
         start_idx = 0
@@ -455,9 +477,7 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             preprocessed = self.video_processor.preprocess(image, height=height, width=width)
             preprocessed = preprocessed.to(device, dtype=torch.float32)
             # VAE encode: add temporal dim -> encode -> extract mean
-            first_frame_latent = self.vae.encode(
-                preprocessed.unsqueeze(2).to(self.vae.dtype)
-            ).latent_dist.mean.float()
+            first_frame_latent = self.vae.encode(preprocessed.unsqueeze(2).to(self.vae.dtype)).latent_dist.mean.float()
             # Normalize using the same latents_mean/latents_std as the decode path
             latents_mean = (
                 torch.tensor(self.vae.config.latents_mean)
@@ -474,8 +494,14 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
             # Seed KV caches by running first frame through both transformers at t=0
             t_zero = torch.zeros([batch_size], device=device, dtype=torch.long)
             seed_attn_args = self._build_causal_attn_args(
-                kv_cache, crossattn_cache, 0, frame_seq_length,
-                local_attn_size, sink_size, max_attention_size, attention_kwargs,
+                kv_cache,
+                crossattn_cache,
+                0,
+                frame_seq_length,
+                local_attn_size,
+                sink_size,
+                max_attention_size,
+                attention_kwargs,
             )
             with self.transformer.cache_context("cond"):
                 self.transformer(
@@ -487,8 +513,14 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                     return_dict=False,
                 )
             seed_attn_args_2 = self._build_causal_attn_args(
-                kv_cache_2, crossattn_cache, 0, frame_seq_length,
-                local_attn_size, sink_size, max_attention_size, attention_kwargs,
+                kv_cache_2,
+                crossattn_cache,
+                0,
+                frame_seq_length,
+                local_attn_size,
+                sink_size,
+                max_attention_size,
+                attention_kwargs,
             )
             with self.transformer_2.cache_context("cond"):
                 self.transformer_2(
@@ -538,7 +570,11 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                     # Build model input in BCTHW format
                     current_latents_bcthw = noise_latents_btchw.permute(0, 2, 1, 3, 4)  # [B,C,T,H,W]
                     latent_model_input = current_latents_bcthw.to(transformer_dtype)
-                    timestep = t_cur.expand(block_latents.shape[0]) if isinstance(t_cur, torch.Tensor) else torch.tensor([t_cur], device=device).expand(block_latents.shape[0])
+                    timestep = (
+                        t_cur.expand(block_latents.shape[0])
+                        if isinstance(t_cur, torch.Tensor)
+                        else torch.tensor([t_cur], device=device).expand(block_latents.shape[0])
+                    )
 
                     attention_args = self._build_causal_attn_args(
                         current_kv_cache,
@@ -585,12 +621,16 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                     if t_cur >= boundary_timestep:
                         sigma_bound_expanded = sigma_boundary.expand(noise_pred_flat.shape[0])
                         pred_video_flat = self._pred_noise_to_x_bound(
-                            noise_pred_flat, noise_latents_flat,
-                            sigma_cur_expanded, sigma_bound_expanded,
+                            noise_pred_flat,
+                            noise_latents_flat,
+                            sigma_cur_expanded,
+                            sigma_bound_expanded,
                         )
                     else:
                         pred_video_flat = self._pred_noise_to_pred_video(
-                            noise_pred_flat, noise_latents_flat, sigma_cur_expanded,
+                            noise_pred_flat,
+                            noise_latents_flat,
+                            sigma_cur_expanded,
                         )
 
                     pred_video_btchw = pred_video_flat.unflatten(0, raw_shape[:2])
@@ -598,20 +638,22 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                     # Re-noise or finalize
                     if i < len(dmd_timesteps) - 1:
                         next_t = dmd_timesteps[i + 1]
-                        sigma_next = self._get_sigma_for_timestep(
-                            self.scheduler, next_t.unsqueeze(0)
-                        )
+                        sigma_next = self._get_sigma_for_timestep(self.scheduler, next_t.unsqueeze(0))
                         sigma_next_expanded = sigma_next.expand(noise_pred_flat.shape[0])
 
-                        noise = randn_tensor(raw_shape, generator=generator, device=device, dtype=pred_video_btchw.dtype)
+                        noise = randn_tensor(
+                            raw_shape, generator=generator, device=device, dtype=pred_video_btchw.dtype
+                        )
                         noise_flat = noise.flatten(0, 1)
 
                         if i < num_high_noise_steps - 1:
                             # Still in high-noise regime -> bounded re-noise
                             sigma_bound_expanded = sigma_boundary.expand(noise_pred_flat.shape[0])
                             noise_latents_btchw = self._add_noise_high(
-                                pred_video_btchw.flatten(0, 1), noise_flat,
-                                sigma_next_expanded, sigma_bound_expanded,
+                                pred_video_btchw.flatten(0, 1),
+                                noise_flat,
+                                sigma_next_expanded,
+                                sigma_bound_expanded,
                             ).unflatten(0, raw_shape[:2])
                         elif i == num_high_noise_steps - 1:
                             # Transitioning past boundary -> use clean prediction
@@ -619,7 +661,8 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                         else:
                             # Standard re-noise
                             noise_latents_btchw = self._add_noise(
-                                pred_video_btchw.flatten(0, 1), noise_flat,
+                                pred_video_btchw.flatten(0, 1),
+                                noise_flat,
                                 sigma_next_expanded,
                             ).unflatten(0, raw_shape[:2])
                     else:
@@ -640,7 +683,16 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                 context_timestep = t_context
 
                 # Update KV caches with clean context
-                attention_args = self._build_causal_attn_args(kv_cache, crossattn_cache, start_idx, frame_seq_length, local_attn_size, sink_size, max_attention_size, attention_kwargs)
+                attention_args = self._build_causal_attn_args(
+                    kv_cache,
+                    crossattn_cache,
+                    start_idx,
+                    frame_seq_length,
+                    local_attn_size,
+                    sink_size,
+                    max_attention_size,
+                    attention_kwargs,
+                )
                 with self.transformer.cache_context("cond"):
                     self.transformer(
                         hidden_states=context_input_model,
@@ -651,7 +703,16 @@ class xFuserCausalWanPipeline(WanImageToVideoPipeline):
                         return_dict=False,
                     )
 
-                attention_args = self._build_causal_attn_args(kv_cache_2, crossattn_cache, start_idx, frame_seq_length, local_attn_size, sink_size, max_attention_size, attention_kwargs)
+                attention_args = self._build_causal_attn_args(
+                    kv_cache_2,
+                    crossattn_cache,
+                    start_idx,
+                    frame_seq_length,
+                    local_attn_size,
+                    sink_size,
+                    max_attention_size,
+                    attention_kwargs,
+                )
                 with self.transformer_2.cache_context("cond"):
                     self.transformer_2(
                         hidden_states=context_input_model,
