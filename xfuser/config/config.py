@@ -271,6 +271,15 @@ class EngineConfig:
     fast_attn_config: FastAttnConfig
 
     def __post_init__(self):
+        if self.parallel_config.pp_degree > 1 and self.runtime_config.warmup_steps < 1:
+            # PipeFusion fills its stale K/V cache with full-sequence steps
+            # before switching to per-patch steps. Without one, the first
+            # patch step updates an empty cache, and later requests of the
+            # same size reuse K/V from the previous request.
+            raise ValueError(
+                f"warmup_steps must be at least 1 when pipefusion_parallel_degree > 1, "
+                f"got {self.runtime_config.warmup_steps}."
+            )
         if self.fast_attn_config.use_fast_attn:
             assert self.parallel_config.dp_degree == self.parallel_config.dit_parallel_size, (
                 "dit_parallel_size must be equal to dp_degree when using DiTFastAttn"
