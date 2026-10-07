@@ -135,6 +135,12 @@ class _Krea2BaseModel(xFuserModel):
         pipe.transformer.config.patch_size = pipe.patch_size
         return pipe
 
+    def _calculate_hybrid_attention_step_multiplier(self, input_args: dict) -> int:
+        # Guidance is on whenever guidance_scale > 0 and runs the transformer
+        # twice per denoising step (no CFG parallelism), so a schedule over
+        # N steps covers 2N transformer calls.
+        return 2 if input_args["guidance_scale"] > 0 else 1
+
     def _run_pipe(self, input_args: dict) -> DiffusionOutput:
         batch_size = self.config.batch_size if self.config.batch_size else 1
         max_seq = input_args.get(
@@ -254,6 +260,10 @@ class xFuserKrea2TurboModel(_Krea2BaseModel):
             },
         },
     )
+
+    def _calculate_hybrid_attention_step_multiplier(self, input_args: dict) -> int:
+        # _run_pipe forces guidance off, so each step is one transformer call.
+        return 1
 
     def _validate_args(self, input_args: dict) -> None:
         super()._validate_args(input_args)
