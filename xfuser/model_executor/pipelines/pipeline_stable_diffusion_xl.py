@@ -37,8 +37,8 @@ class xFuserStableDiffusionXLPipeline(xFuserPipelineBaseWrapper):
         sequence_parallel_available=False,
         pipefusion_parallel_available=False,
     )
-    @xFuserPipelineBaseWrapper.check_to_use_naive_forward
     @xFuserPipelineBaseWrapper.enable_data_parallel
+    @xFuserPipelineBaseWrapper.check_to_use_naive_forward
     def __call__(
         self,
         *args,
