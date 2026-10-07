@@ -210,6 +210,12 @@ class xFuserZImageTransformer2DWrapper(ZImageTransformer2DModel):
         do_cfg_parallel = cfg_world_size > 1
 
         if do_cfg_parallel:
+            if len(x) % cfg_world_size != 0:
+                raise ValueError(
+                    f"CFG parallel degree {cfg_world_size} must divide the batch size {len(x)}; "
+                    "it needs guidance_scale > 0 so that the pipeline batches the negative and "
+                    "positive prompts together."
+                )
             B = len(x) // cfg_world_size
             x = x[cfg_rank * B : (cfg_rank + 1) * B]
             cap_feats = cap_feats[cfg_rank * B : (cfg_rank + 1) * B]
