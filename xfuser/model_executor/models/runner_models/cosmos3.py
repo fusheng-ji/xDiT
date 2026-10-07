@@ -117,6 +117,13 @@ class xFuserCosmos3SuperModel(xFuserModel):
     def _run_pipe(self, input_args: dict) -> DiffusionOutput:
         prompt = input_args.get("prompt", "")
         negative_prompt = input_args.get("negative_prompt", "")
+        # The Cosmos3 pipeline renders one prompt per call.
+        for name, value in (("prompt", prompt), ("negative_prompt", negative_prompt)):
+            if isinstance(value, list) and len(value) > 1:
+                raise ValueError(
+                    f"{self.settings.model_name} renders one {name} per pipeline call, got {len(value)}. "
+                    "Pass a single prompt, or use data parallelism or --batch_size 1 to spread prompts over calls."
+                )
         if isinstance(prompt, list):
             prompt = prompt[0] if prompt else ""
         if isinstance(negative_prompt, list):
