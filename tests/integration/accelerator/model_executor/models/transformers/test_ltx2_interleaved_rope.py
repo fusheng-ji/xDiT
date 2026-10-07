@@ -71,7 +71,10 @@ def _parity_worker(rank, world_size, init_method, rope_type):
         torch.manual_seed(0)
         reference = LTX2VideoTransformer3DModel(**config).to(device).eval()
         parallel = xFuserLTX2VideoTransformer3DWrapper(**config)
-        parallel.load_state_dict(reference.state_dict())
+        # AITER adds ones buffers for affine-free RMSNorms, absent in Diffusers.
+        incompatible = parallel.load_state_dict(reference.state_dict(), strict=False)
+        assert not incompatible.unexpected_keys, incompatible.unexpected_keys
+        assert all(key.endswith("._ones_weight") for key in incompatible.missing_keys), incompatible.missing_keys
         parallel = parallel.to(device).eval()
         initialize_runtime_state(pipeline=_Pipeline(parallel), engine_config=engine_config)
         get_runtime_state().set_attention_backend("SDPA")
