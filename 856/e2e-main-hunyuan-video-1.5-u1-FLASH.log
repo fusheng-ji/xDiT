@@ -1,0 +1,72 @@
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:07:56 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 6784.30it/s]
+Loading pipeline components...:  50%|█████     | 4/8 [00:00<00:00, 10.09it/s]
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 111/111 [00:00<00:00, 1136.18it/s]
+Loading pipeline components...:  75%|███████▌  | 6/8 [00:01<00:00,  4.45it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.05s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.86it/s]
+Loading pipeline components...:  88%|████████▊ | 7/8 [00:02<00:00,  2.36it/s]
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s][A
+Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:07,  1.30s/it][A
+Loading checkpoint shards:  29%|██▊       | 2/7 [00:02<00:06,  1.26s/it][A
+Loading checkpoint shards:  43%|████▎     | 3/7 [00:03<00:05,  1.25s/it][A
+Loading checkpoint shards:  57%|█████▋    | 4/7 [00:04<00:03,  1.23s/it][A
+Loading checkpoint shards:  71%|███████▏  | 5/7 [00:06<00:02,  1.22s/it][A
+Loading checkpoint shards:  86%|████████▌ | 6/7 [00:06<00:01,  1.03s/it][A
+Loading checkpoint shards: 100%|██████████| 7/7 [00:07<00:00,  1.19it/s][ALoading checkpoint shards: 100%|██████████| 7/7 [00:07<00:00,  1.04s/it]
+Loading pipeline components...: 100%|██████████| 8/8 [00:09<00:00,  2.14s/it]Loading pipeline components...: 100%|██████████| 8/8 [00:09<00:00,  1.21s/it]
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:24,  1.29s/it] 10%|█         | 2/20 [00:02<00:20,  1.17s/it] 15%|█▌        | 3/20 [00:03<00:19,  1.13s/it] 20%|██        | 4/20 [00:04<00:17,  1.11s/it] 25%|██▌       | 5/20 [00:05<00:16,  1.10s/it] 30%|███       | 6/20 [00:06<00:15,  1.09s/it] 35%|███▌      | 7/20 [00:07<00:14,  1.09s/it] 40%|████      | 8/20 [00:08<00:13,  1.09s/it] 45%|████▌     | 9/20 [00:09<00:11,  1.09s/it] 50%|█████     | 10/20 [00:11<00:10,  1.09s/it] 55%|█████▌    | 11/20 [00:12<00:09,  1.09s/it] 60%|██████    | 12/20 [00:13<00:08,  1.09s/it] 65%|██████▌   | 13/20 [00:14<00:07,  1.09s/it] 70%|███████   | 14/20 [00:15<00:06,  1.10s/it] 75%|███████▌  | 15/20 [00:16<00:05,  1.10s/it] 80%|████████  | 16/20 [00:17<00:04,  1.10s/it] 85%|████████▌ | 17/20 [00:18<00:03,  1.10s/it] 90%|█████████ | 18/20 [00:19<00:02,  1.10s/it] 95%|█████████▌| 19/20 [00:20<00:01,  1.10s/it]100%|██████████| 20/20 [00:22<00:00,  1.10s/it]100%|██████████| 20/20 [00:22<00:00,  1.10s/it]
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:08:57 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 03:08:57 [parallel_state.py:247] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://<ip>:45931 backend=nccl
+INFO 11-20 03:08:57 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 1
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:07,  1.33s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:02<00:06,  1.29s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:03<00:03,  1.00it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:03<00:02,  1.16it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:04<00:01,  1.29it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:05<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:05<00:00,  1.40it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:05<00:00,  1.18it/s]
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][A
+Loading weights:  94%|█████████▎| 104/111 [00:00<00:00, 1037.93it/s][ALoading weights: 100%|██████████| 111/111 [00:00<00:00, 1099.80it/s]
+Loading pipeline components...:  12%|█▎        | 1/8 [00:00<00:01,  3.95it/s]Loading pipeline components...:  25%|██▌       | 2/8 [00:00<00:02,  2.25it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.57it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.05it/s]
+Loading pipeline components...:  38%|███▊      | 3/8 [00:01<00:02,  1.82it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 6595.65it/s]
+Loading pipeline components...:  62%|██████▎   | 5/8 [00:01<00:00,  3.62it/s]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+Loading pipeline components...: 100%|██████████| 8/8 [00:01<00:00,  4.84it/s]
+INFO 11-20 03:09:20 [config.py:221] Pipeline patch number not set, using default value 1
+WARNING 11-20 03:09:20 [logger.py:126] Using FLASH as attention backend.
+wrapper attention backend: FLASH
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:16,  1.12it/s] 10%|█         | 2/20 [00:01<00:13,  1.30it/s] 15%|█▌        | 3/20 [00:02<00:12,  1.37it/s] 20%|██        | 4/20 [00:02<00:11,  1.39it/s] 25%|██▌       | 5/20 [00:03<00:10,  1.41it/s] 30%|███       | 6/20 [00:04<00:09,  1.42it/s] 35%|███▌      | 7/20 [00:05<00:09,  1.44it/s] 40%|████      | 8/20 [00:05<00:08,  1.45it/s] 45%|████▌     | 9/20 [00:06<00:07,  1.45it/s] 50%|█████     | 10/20 [00:07<00:06,  1.45it/s] 55%|█████▌    | 11/20 [00:07<00:06,  1.46it/s] 60%|██████    | 12/20 [00:08<00:05,  1.46it/s] 65%|██████▌   | 13/20 [00:09<00:04,  1.46it/s] 70%|███████   | 14/20 [00:09<00:04,  1.46it/s] 75%|███████▌  | 15/20 [00:10<00:03,  1.46it/s] 80%|████████  | 16/20 [00:11<00:02,  1.46it/s] 85%|████████▌ | 17/20 [00:11<00:02,  1.46it/s] 90%|█████████ | 18/20 [00:12<00:01,  1.46it/s] 95%|█████████▌| 19/20 [00:13<00:00,  1.45it/s]100%|██████████| 20/20 [00:13<00:00,  1.45it/s]100%|██████████| 20/20 [00:13<00:00,  1.44it/s]
+[rank0]:[W1120 03:09:37.922777448 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:09:50 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:00<00:05,  1.14it/s]Loading checkpoint shards:  29%|██▊       | 2/7 [00:01<00:03,  1.33it/s]Loading checkpoint shards:  43%|████▎     | 3/7 [00:02<00:02,  1.40it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:02<00:02,  1.45it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:03<00:01,  1.50it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:04<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.67it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.52it/s]
+{
+  "model": "hunyuan-video-1.5",
+  "ulysses_degree": 1,
+  "dtype": "bfloat16",
+  "calls": 40,
+  "independent_trajectory": {
+    "first": 0.02073552368462036,
+    "last": 0.5315769681391186,
+    "max": 0.5315769681391186
+  },
+  "stock_math_kernel_trajectory": null,
+  "same_input": {
+    "first": 0.02073552368462036,
+    "last": 0.01097177720554323,
+    "max": 0.02843195868317725
+  },
+  "sample_psnr_db": [
+    11.490980343278942,
+    15.457884166744655
+  ]
+}

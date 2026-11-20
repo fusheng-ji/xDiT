@@ -1,0 +1,161 @@
+head 34bf78d2dd9c0907dd759edd4a6b0272b3068cce
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 06:10:25 [runner_utils.py:321] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+WARNING 11-20 06:10:25 [args.py:1481] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 06:10:25 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+INFO 11-20 06:10:25 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 06:10:25 [runner_utils.py:30] Model Runner Arguments:
+INFO 11-20 06:10:25 [runner_utils.py:30]   model: HunyuanVideo
+INFO 11-20 06:10:25 [runner_utils.py:30]   lora_path: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   lora_weight_name: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   lora_scale: 1.0
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_parallel_vae: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_torch_compile: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   attention_backend: FLASH_3
+INFO 11-20 06:10:25 [runner_utils.py:30]   cross_attention_backend: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_cfg_parallel: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   data_parallel_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   ulysses_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   ring_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   pipefusion_parallel_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   tensor_parallel_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   text_encoder_tp_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   fully_shard_degree: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   fully_shard_components: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   reshard_after_forward: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   memory_efficient_sharding: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   memory_efficient_replicated_load: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   height: 464
+INFO 11-20 06:10:25 [runner_utils.py:30]   width: 848
+INFO 11-20 06:10:25 [runner_utils.py:30]   num_frames: 9
+INFO 11-20 06:10:25 [runner_utils.py:30]   prompt: ['A cat walks on the grass, realistic style.']
+INFO 11-20 06:10:25 [runner_utils.py:30]   negative_prompt: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   num_inference_steps: 4
+INFO 11-20 06:10:25 [runner_utils.py:30]   max_sequence_length: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   seed: 42
+INFO 11-20 06:10:25 [runner_utils.py:30]   guidance_scale: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   guidance_scale_2: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   flow_shift: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   enable_sequential_cpu_offload: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   enable_model_cpu_offload: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   enable_group_cpu_offload: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   group_offload_low_cpu_mem: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   enable_tiling: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   enable_slicing: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   vae_tile_size_height: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   vae_tile_size_width: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   vae_tile_overlap_height: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   vae_tile_overlap_width: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   gemm_quantization: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   gemm_config: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_int8_gemms: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_fp8_gemms: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_fp8_text_encoder: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_fp4_gemms: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   fp8_precision_override_prefix_patterns: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   fp8_precision_override_suffix_patterns: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_fp8_comms: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   fp8_comms_scale: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   fp8_comms_safety_factor: 0.85
+INFO 11-20 06:10:25 [runner_utils.py:30]   num_iterations: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   determinism_check: 0
+INFO 11-20 06:10:25 [runner_utils.py:30]   determinism_check_report_ranks: last
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile_wait: 2
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile_warmup: 2
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile_active: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile_capture_phase: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   profile_with_stack: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   warmup_calls: 0
+INFO 11-20 06:10:25 [runner_utils.py:30]   output_directory: <repo>/../h100-results/901/FLASH_3-1gpu
+INFO 11-20 06:10:25 [runner_utils.py:30]   input_images: []
+INFO 11-20 06:10:25 [runner_utils.py:30]   resize_input_images: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   task: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   batch_size: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   dataset_path: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_hybrid_attn_schedule: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   hybrid_attn_low_precision_backend: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   hybrid_attn_high_precision_backend: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   num_hybrid_attn_high_precision_steps: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   hybrid_attn_schedule: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_hybrid_gemm_schedule: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   num_hybrid_gemm_high_precision_steps: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_vae_channels_last_format: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_ssta_sparse_text_to_image: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   spargeattn_simthreshold: 0.3
+INFO 11-20 06:10:25 [runner_utils.py:30]   spargeattn_cdfthreshold: 0.92
+INFO 11-20 06:10:25 [runner_utils.py:30]   spargeattn_reorder_sequence: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_spargeattn_static_block_mask: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_spargeattn_head_balance: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   sol_attn_tau: 0.2
+INFO 11-20 06:10:25 [runner_utils.py:30]   sol_attn_thresh_type: exact
+INFO 11-20 06:10:25 [runner_utils.py:30]   sol_attn_kv_splits: auto
+INFO 11-20 06:10:25 [runner_utils.py:30]   sol_attn_sink_tokens: 0
+INFO 11-20 06:10:25 [runner_utils.py:30]   sol_attn_sink_start: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_block_size: 128
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_top_k: 1
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_top_k_ratio: 0.0
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_drop_rates: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_prob_threshold: 0.9
+INFO 11-20 06:10:25 [runner_utils.py:30]   bsa_sparsity: 0.75
+INFO 11-20 06:10:25 [runner_utils.py:30]   bsa_cdf_threshold: 0.2
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_reorder_sequence: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_vsa_static_block_mask: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_vsa_first_frame_mask: True
+INFO 11-20 06:10:25 [runner_utils.py:30]   vsa_collect_density: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   distilled_transformer_path: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   distilled_transformer_2_path: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   audio_prompt: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_teacache: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   use_fbcache: False
+INFO 11-20 06:10:25 [runner_utils.py:30]   cache_method: None
+INFO 11-20 06:10:25 [runner_utils.py:30]   cache_config: None
+INFO 11-20 06:10:25 [runner_utils.py:30] Parameter 'guidance_scale' not specified. Using model-specific default value: 6.0
+INFO 11-20 06:10:25 [runner_utils.py:30] Parameter 'num_hybrid_attn_high_precision_steps' not specified. Using model-specific default value: 5
+INFO 11-20 06:10:25 [runner_utils.py:30] Initializing model: HunyuanVideo
+INFO 11-20 06:10:25 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 06:10:25 [runner_utils.py:30] Loading model pipeline...
+<venv>/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00, 70.33it/s]
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 3804.74it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 10.70it/s]Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  8.38it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  3.03it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/290 [00:00<01:11,  4.02it/s][A
+Loading weights:  14%|█▍        | 40/290 [00:00<00:01, 142.71it/s][A
+Loading weights:  22%|██▏       | 63/290 [00:00<00:01, 170.05it/s][A
+Loading weights:  30%|██▉       | 86/290 [00:00<00:01, 161.35it/s][A
+Loading weights:  37%|███▋      | 106/290 [00:00<00:01, 171.23it/s][A
+Loading weights:  43%|████▎     | 126/290 [00:00<00:00, 168.69it/s][A
+Loading weights:  51%|█████     | 147/290 [00:00<00:00, 165.14it/s][A
+Loading weights:  57%|█████▋    | 165/290 [00:01<00:00, 168.56it/s][A
+Loading weights:  63%|██████▎   | 183/290 [00:01<00:00, 169.11it/s][A
+Loading weights:  69%|██████▉   | 201/290 [00:01<00:00, 168.72it/s][A
+Loading weights:  76%|███████▌  | 219/290 [00:01<00:00, 169.28it/s][A
+Loading weights:  82%|████████▏ | 237/290 [00:01<00:00, 170.69it/s][A
+Loading weights:  88%|████████▊ | 255/290 [00:01<00:00, 170.51it/s][A
+Loading weights:  94%|█████████▍| 273/290 [00:01<00:00, 167.74it/s][ALoading weights: 100%|██████████| 290/290 [00:01<00:00, 164.67it/s]
+Loading pipeline components...:  86%|████████▌ | 6/7 [00:04<00:01,  1.06s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:04<00:00,  1.72it/s]
+DEBUG 11-20 06:10:30 [runner_utils.py:28] Replacing tokenizer 'tokenizer' (type=LlamaTokenizer) with PreTrainedTokenizerFast...
+INFO 11-20 06:10:30 [runner_utils.py:30] Fixed tokenizer 'tokenizer': reloaded as PreTrainedTokenizerFast (transformers v5 LlamaTokenizer bug workaround)
+INFO 11-20 06:10:30 [runner_utils.py:30] Initializing runtime state...
+WARNING 11-20 06:10:30 [logger.py:126] Model parallel is not initialized, initializing...
+WARNING 11-20 06:10:30 [logger.py:126] Using FLASH_3 as attention backend.
+INFO 11-20 06:10:53 [runner_utils.py:30] Enabling VAE tiling on AutoencoderKLHunyuanVideo...
+INFO 11-20 06:10:53 [runner_utils.py:30] Model initialization complete.
+INFO 11-20 06:10:53 [runner_utils.py:30] Running model...
+INFO 11-20 06:10:53 [runner_utils.py:30] Running iteration 1/1
+  0%|          | 0/4 [00:00<?, ?it/s][pad] sp 1 shape (1, 4611, 3072) dim -2 pad 0
+[pad] sp 1 shape (4611, 128) dim 0 pad 0
+ 25%|██▌       | 1/4 [00:00<00:01,  2.34it/s] 50%|█████     | 2/4 [00:00<00:00,  3.44it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.63it/s]100%|██████████| 4/4 [00:01<00:00,  3.73it/s]100%|██████████| 4/4 [00:01<00:00,  3.52it/s]
+INFO 11-20 06:10:56 [runner_utils.py:30] Iteration 1 completed in 2.52s
+INFO 11-20 06:10:56 [runner_utils.py:30] Average time over 1 runs: 2.52s
+INFO 11-20 06:10:56 [runner_utils.py:30] Total time spent: 2.52s
+INFO 11-20 06:10:56 [runner_utils.py:30] Output video saved to <repo>/../h100-results/901/FLASH_3-1gpu/hunyuan_video_u1r1_tc_False_464x848_0.mp4
+INFO 11-20 06:10:56 [runner_utils.py:30] Timings saved to <repo>/../h100-results/901/FLASH_3-1gpu/timings.json
+INFO 11-20 06:10:58 [runner_utils.py:30] Cleaned up resources.
+exit 0

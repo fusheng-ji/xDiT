@@ -1,0 +1,382 @@
+head 589f9bb24be70d7755c72da509f47717b07c0f05
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:40:45 [runner_utils.py:321] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 03:40:45 [runner_utils.py:321] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+WARNING 11-20 03:40:45 [args.py:1481] Distributed environment is not initialized. Initializing...
+WARNING 11-20 03:40:45 [args.py:1481] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 03:40:45 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+DEBUG 11-20 03:40:45 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+INFO 11-20 03:40:46 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 03:40:46 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 03:40:46 [runner_utils.py:30] Model Runner Arguments:
+INFO 11-20 03:40:46 [runner_utils.py:30]   model: ideogram-ai/ideogram-4-fp8
+INFO 11-20 03:40:46 [runner_utils.py:30]   lora_path: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   lora_weight_name: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   lora_scale: 1.0
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_parallel_vae: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_torch_compile: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   attention_backend: SAGE
+INFO 11-20 03:40:46 [runner_utils.py:30]   cross_attention_backend: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_cfg_parallel: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   data_parallel_degree: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   ulysses_degree: 2
+INFO 11-20 03:40:46 [runner_utils.py:30]   ring_degree: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   pipefusion_parallel_degree: 1
+INFO 11-20 03:40:46 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   tensor_parallel_degree: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   text_encoder_tp_degree: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   fully_shard_degree: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   fully_shard_components: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   reshard_after_forward: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   memory_efficient_sharding: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   memory_efficient_replicated_load: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   height: 1024
+INFO 11-20 03:40:46 [runner_utils.py:30]   width: 1024
+INFO 11-20 03:40:46 [runner_utils.py:30]   num_frames: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   prompt: ["A minimalist poster for a summer jazz festival, bold typography that reads 'JAZZ NIGHTS', warm sunset colors"]
+INFO 11-20 03:40:46 [runner_utils.py:30]   negative_prompt: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   num_inference_steps: 20
+INFO 11-20 03:40:46 [runner_utils.py:30]   max_sequence_length: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   seed: 42
+INFO 11-20 03:40:46 [runner_utils.py:30]   guidance_scale: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   guidance_scale_2: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   flow_shift: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   enable_sequential_cpu_offload: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   enable_model_cpu_offload: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   enable_group_cpu_offload: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   group_offload_low_cpu_mem: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   enable_tiling: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   enable_slicing: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   vae_tile_size_height: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   vae_tile_size_width: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   vae_tile_overlap_height: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   vae_tile_overlap_width: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   gemm_quantization: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   gemm_config: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_int8_gemms: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_fp8_gemms: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_fp8_text_encoder: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_fp4_gemms: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   fp8_precision_override_prefix_patterns: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   fp8_precision_override_suffix_patterns: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_fp8_comms: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   fp8_comms_scale: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   fp8_comms_safety_factor: 0.85
+INFO 11-20 03:40:46 [runner_utils.py:30]   num_iterations: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   determinism_check: 0
+INFO 11-20 03:40:46 [runner_utils.py:30]   determinism_check_report_ranks: last
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile_wait: 2
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile_warmup: 2
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile_active: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile_capture_phase: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   profile_with_stack: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   warmup_calls: 0
+INFO 11-20 03:40:46 [runner_utils.py:30]   output_directory: <repo>/../h100-results/900/SAGE-pr-u2
+INFO 11-20 03:40:46 [runner_utils.py:30]   input_images: []
+INFO 11-20 03:40:46 [runner_utils.py:30]   resize_input_images: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   task: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   batch_size: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   dataset_path: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_hybrid_attn_schedule: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   hybrid_attn_low_precision_backend: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   hybrid_attn_high_precision_backend: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   num_hybrid_attn_high_precision_steps: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   hybrid_attn_schedule: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_hybrid_gemm_schedule: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   num_hybrid_gemm_high_precision_steps: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_vae_channels_last_format: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_ssta_sparse_text_to_image: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   spargeattn_simthreshold: 0.3
+INFO 11-20 03:40:46 [runner_utils.py:30]   spargeattn_cdfthreshold: 0.92
+INFO 11-20 03:40:46 [runner_utils.py:30]   spargeattn_reorder_sequence: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_spargeattn_static_block_mask: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_spargeattn_head_balance: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   sol_attn_tau: 0.2
+INFO 11-20 03:40:46 [runner_utils.py:30]   sol_attn_thresh_type: exact
+INFO 11-20 03:40:46 [runner_utils.py:30]   sol_attn_kv_splits: auto
+INFO 11-20 03:40:46 [runner_utils.py:30]   sol_attn_sink_tokens: 0
+INFO 11-20 03:40:46 [runner_utils.py:30]   sol_attn_sink_start: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_block_size: 128
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_top_k: 1
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_top_k_ratio: 0.0
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_drop_rates: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_prob_threshold: 0.9
+INFO 11-20 03:40:46 [runner_utils.py:30]   bsa_sparsity: 0.75
+INFO 11-20 03:40:46 [runner_utils.py:30]   bsa_cdf_threshold: 0.2
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_reorder_sequence: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_vsa_static_block_mask: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_vsa_first_frame_mask: True
+INFO 11-20 03:40:46 [runner_utils.py:30]   vsa_collect_density: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   distilled_transformer_path: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   distilled_transformer_2_path: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   audio_prompt: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_teacache: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   use_fbcache: False
+INFO 11-20 03:40:46 [runner_utils.py:30]   cache_method: None
+INFO 11-20 03:40:46 [runner_utils.py:30]   cache_config: None
+INFO 11-20 03:40:46 [runner_utils.py:30] Parameter 'max_sequence_length' not specified. Using model-specific default value: 2048
+INFO 11-20 03:40:46 [runner_utils.py:30] Initializing model: ideogram-ai/ideogram-4-fp8
+INFO 11-20 03:40:46 [config.py:207] Pipeline patch number not set, using default value 1
+INFO 11-20 03:40:46 [runner_utils.py:30] Loading model pipeline...
+<venv>/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+INFO 11-20 03:42:24 [runner_utils.py:30] Loaded ideogram-ai/ideogram-4-fp8/transformer through the Ideogram FP8 converter.
+INFO 11-20 03:44:01 [runner_utils.py:30] Loaded ideogram-ai/ideogram-4-fp8/unconditional_transformer through the Ideogram FP8 converter.
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Couldn't connect to the Hub: Cannot reach https://huggingface.co/api/models/ideogram-ai/ideogram-4-fp8: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable..
+Will try to load from local cache.
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]INFO 11-20 03:47:39 [runner_utils.py:30] Loaded ideogram-ai/ideogram-4-fp8/text_encoder through the Ideogram FP8 converter.
+INFO 11-20 03:47:39 [runner_utils.py:30] Prompt enhancer head is unavailable; plain text prompts will not be upsampled automatically (diffusers/qwen3-vl-8b-instruct-lm-head does not appear to have a file named config.json.).
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  6.82it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  6.82it/s]
+WARNING 11-20 03:47:40 [logger.py:126] Model parallel is not initialized, initializing...
+INFO 11-20 03:47:40 [runner_utils.py:30] Initializing runtime state...
+WARNING 11-20 03:47:40 [logger.py:126] Using SAGE as attention backend.
+WARNING 11-20 03:47:40 [logger.py:126] Low-precision attention backend is enabled. This may cause poor quality outputs, consider using hybrid attention if possible.
+INFO 11-20 03:48:50 [runner_utils.py:30] Model initialization complete.
+INFO 11-20 03:48:50 [runner_utils.py:30] Running model...
+INFO 11-20 03:48:50 [runner_utils.py:30] Running iteration 1/1
+[pad] sp 2 shape (1, 4127, 4608) dim 1 pad 1
+[pad] sp 2 shape (1, 4127, 3) dim 1 pad 1
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:02<?, ?it/s]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "<repo>/h100-handoff/drive.py", line 54, in <module>
+[rank1]:     runpy.run_module("xfuser.runner", run_name="__main__", alter_sys=True)
+[rank1]:   File "<frozen runpy>", line 226, in run_module
+[rank1]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank1]:   File "<frozen runpy>", line 88, in _run_code
+[rank1]:   File "<trees>/pr900/xfuser/runner.py", line 140, in <module>
+[rank1]:     main()
+[rank1]:   File "<trees>/pr900/xfuser/runner.py", line 132, in main
+[rank1]:     output, timings = runner.run(input_args)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/runner.py", line 69, in run
+[rank1]:     output, timings = self.model.run(input_args)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/base_model.py", line 1081, in run
+[rank1]:     output, timing = self._run_timed_pipe(input_args)
+[rank1]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/base_model.py", line 1283, in _run_timed_pipe
+[rank1]:     out = self._run_pipe(input_args)
+[rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/ideogram4.py", line 487, in _run_pipe
+[rank1]:     output = self.pipe(
+[rank1]:              ^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/pipelines/pipeline_ideogram4.py", line 214, in __call__
+[rank1]:     return super().__call__(
+[rank1]:            ^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/diffusers/pipelines/ideogram4/pipeline_ideogram4.py", line 683, in __call__
+[rank1]:     pos_out = self.transformer(
+[rank1]:               ^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/diffusers/utils/peft_utils.py", line 323, in wrapper
+[rank1]:     result = forward_fn(self, *args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/models/transformers/transformer_ideogram4.py", line 270, in forward
+[rank1]:     hidden_states = block(
+[rank1]:                     ^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1884, in _call_impl
+[rank1]:     return inner()
+[rank1]:            ^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1832, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/diffusers/models/transformers/transformer_ideogram4.py", line 220, in forward
+[rank1]:     attn_out = self.attention(
+[rank1]:                ^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/diffusers/models/transformers/transformer_ideogram4.py", line 169, in forward
+[rank1]:     return self.processor(self, hidden_states, attention_mask, image_rotary_emb, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/models/transformers/transformer_ideogram4.py", line 68, in __call__
+[rank1]:     hidden_states = self.attention_function(
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 748, in USP
+[rank1]:     out, _ = attention_function(
+[rank1]:              ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 516, in wrapper
+[rank1]:     return func(query, key, value, dropout_p=dropout_p, is_causal=is_causal, attention_kwargs=attention_kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 472, in call
+[rank1]:     return spec.run(
+[rank1]:            ^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/core/attention/spec.py", line 329, in run
+[rank1]:     return fn(query, key, value, call)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/pr900/xfuser/core/attention/backends/sage/kernel.py", line 9, in sage_attention
+[rank1]:     return sageattn(query, key, value, is_causal=call.is_causal, return_lse=True)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/sageattention/core.py", line 151, in sageattn
+[rank1]:     return sageattn_qk_int8_pv_fp8_cuda_sm90(q, k, v, tensor_layout=tensor_layout, is_causal=is_causal, sm_scale=sm_scale, return_lse=return_lse, pv_accum_dtype="fp32+fp32")
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/sageattention/core.py", line 937, in sageattn_qk_int8_pv_fp8_cuda_sm90
+[rank1]:     raise ValueError(f"Unsupported head_dim: {head_dim_og}")
+[rank1]: ValueError: Unsupported head_dim: 256
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<repo>/h100-handoff/drive.py", line 54, in <module>
+[rank0]:     runpy.run_module("xfuser.runner", run_name="__main__", alter_sys=True)
+[rank0]:   File "<frozen runpy>", line 226, in run_module
+[rank0]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "<trees>/pr900/xfuser/runner.py", line 140, in <module>
+[rank0]:     main()
+[rank0]:   File "<trees>/pr900/xfuser/runner.py", line 132, in main
+[rank0]:     output, timings = runner.run(input_args)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/runner.py", line 69, in run
+[rank0]:     output, timings = self.model.run(input_args)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/base_model.py", line 1081, in run
+[rank0]:     output, timing = self._run_timed_pipe(input_args)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/base_model.py", line 1283, in _run_timed_pipe
+[rank0]:     out = self._run_pipe(input_args)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/models/runner_models/ideogram4.py", line 487, in _run_pipe
+[rank0]:     output = self.pipe(
+[rank0]:              ^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/pipelines/pipeline_ideogram4.py", line 214, in __call__
+[rank0]:     return super().__call__(
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/diffusers/pipelines/ideogram4/pipeline_ideogram4.py", line 683, in __call__
+[rank0]:     pos_out = self.transformer(
+[rank0]:               ^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/diffusers/utils/peft_utils.py", line 323, in wrapper
+[rank0]:     result = forward_fn(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/models/transformers/transformer_ideogram4.py", line 270, in forward
+[rank0]:     hidden_states = block(
+[rank0]:                     ^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1884, in _call_impl
+[rank0]:     return inner()
+[rank0]:            ^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1832, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/diffusers/models/transformers/transformer_ideogram4.py", line 220, in forward
+[rank0]:     attn_out = self.attention(
+[rank0]:                ^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/diffusers/models/transformers/transformer_ideogram4.py", line 169, in forward
+[rank0]:     return self.processor(self, hidden_states, attention_mask, image_rotary_emb, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/models/transformers/transformer_ideogram4.py", line 68, in __call__
+[rank0]:     hidden_states = self.attention_function(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 748, in USP
+[rank0]:     out, _ = attention_function(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 516, in wrapper
+[rank0]:     return func(query, key, value, dropout_p=dropout_p, is_causal=is_causal, attention_kwargs=attention_kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/model_executor/layers/usp.py", line 472, in call
+[rank0]:     return spec.run(
+[rank0]:            ^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/core/attention/spec.py", line 329, in run
+[rank0]:     return fn(query, key, value, call)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/pr900/xfuser/core/attention/backends/sage/kernel.py", line 9, in sage_attention
+[rank0]:     return sageattn(query, key, value, is_causal=call.is_causal, return_lse=True)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/sageattention/core.py", line 151, in sageattn
+[rank0]:     return sageattn_qk_int8_pv_fp8_cuda_sm90(q, k, v, tensor_layout=tensor_layout, is_causal=is_causal, sm_scale=sm_scale, return_lse=return_lse, pv_accum_dtype="fp32+fp32")
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/sageattention/core.py", line 937, in sageattn_qk_int8_pv_fp8_cuda_sm90
+[rank0]:     raise ValueError(f"Unsupported head_dim: {head_dim_og}")
+[rank0]: ValueError: Unsupported head_dim: 256
+[rank0]:[W1120 03:49:01.166571865 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1120 03:49:02.190000 3931127 torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 3931159 closing signal SIGTERM
+E1120 03:49:02.409000 3931127 torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 1 (pid: 3931160) of binary: <venv>/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1020, in <module>
+    main()
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+<repo>/h100-handoff/drive.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-11-20_03:49:02
+  host      : <host>
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3931159) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-20_03:49:02
+  host      : <host>
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3931160) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+exit 1

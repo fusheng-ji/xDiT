@@ -1,0 +1,71 @@
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:01:33 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s][transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
+
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 729/729 [00:00<00:00, 7544.61it/s]
+Loading pipeline components...:  20%|██        | 1/5 [00:00<00:02,  1.92it/s]The config attributes {'pooled_projection_dim': 768} were passed to QwenImageTransformer2DModel, but are not expected and will be ignored. Please verify your config.json configuration file.
+
+Loading checkpoint shards:   0%|          | 0/9 [00:00<?, ?it/s][A
+Loading checkpoint shards:  67%|██████▋   | 6/9 [00:00<00:00, 52.86it/s][ALoading checkpoint shards: 100%|██████████| 9/9 [00:00<00:00, 55.53it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:00<00:01,  2.33it/s]Loading pipeline components...:  60%|██████    | 3/5 [00:01<00:00,  3.06it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  4.47it/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:23,  2.13it/s]  4%|▍         | 2/50 [00:00<00:15,  3.04it/s]  6%|▌         | 3/50 [00:00<00:13,  3.52it/s]  8%|▊         | 4/50 [00:01<00:12,  3.81it/s] 10%|█         | 5/50 [00:01<00:11,  3.98it/s] 12%|█▏        | 6/50 [00:01<00:10,  4.10it/s] 14%|█▍        | 7/50 [00:01<00:10,  4.18it/s] 16%|█▌        | 8/50 [00:02<00:09,  4.23it/s] 18%|█▊        | 9/50 [00:02<00:09,  4.27it/s] 20%|██        | 10/50 [00:02<00:09,  4.29it/s] 22%|██▏       | 11/50 [00:02<00:09,  4.30it/s] 24%|██▍       | 12/50 [00:03<00:08,  4.31it/s] 26%|██▌       | 13/50 [00:03<00:08,  4.32it/s] 28%|██▊       | 14/50 [00:03<00:08,  4.32it/s] 30%|███       | 15/50 [00:03<00:08,  4.33it/s] 32%|███▏      | 16/50 [00:03<00:07,  4.32it/s] 34%|███▍      | 17/50 [00:04<00:07,  4.32it/s] 36%|███▌      | 18/50 [00:04<00:07,  4.32it/s] 38%|███▊      | 19/50 [00:04<00:07,  4.32it/s] 40%|████      | 20/50 [00:04<00:06,  4.32it/s] 42%|████▏     | 21/50 [00:05<00:06,  4.33it/s] 44%|████▍     | 22/50 [00:05<00:06,  4.33it/s] 46%|████▌     | 23/50 [00:05<00:06,  4.33it/s] 48%|████▊     | 24/50 [00:05<00:06,  4.33it/s] 50%|█████     | 25/50 [00:06<00:05,  4.32it/s] 52%|█████▏    | 26/50 [00:06<00:05,  4.32it/s] 54%|█████▍    | 27/50 [00:06<00:05,  4.32it/s] 56%|█████▌    | 28/50 [00:06<00:05,  4.32it/s] 58%|█████▊    | 29/50 [00:06<00:04,  4.32it/s] 60%|██████    | 30/50 [00:07<00:04,  4.32it/s] 62%|██████▏   | 31/50 [00:07<00:04,  4.33it/s] 64%|██████▍   | 32/50 [00:07<00:04,  4.33it/s] 66%|██████▌   | 33/50 [00:07<00:03,  4.32it/s] 68%|██████▊   | 34/50 [00:08<00:03,  4.32it/s] 70%|███████   | 35/50 [00:08<00:03,  4.33it/s] 72%|███████▏  | 36/50 [00:08<00:03,  4.33it/s] 74%|███████▍  | 37/50 [00:08<00:03,  4.33it/s] 76%|███████▌  | 38/50 [00:09<00:02,  4.33it/s] 78%|███████▊  | 39/50 [00:09<00:02,  4.34it/s] 80%|████████  | 40/50 [00:09<00:02,  4.33it/s] 82%|████████▏ | 41/50 [00:09<00:02,  4.33it/s] 84%|████████▍ | 42/50 [00:09<00:01,  4.33it/s] 86%|████████▌ | 43/50 [00:10<00:01,  4.30it/s] 88%|████████▊ | 44/50 [00:10<00:01,  4.31it/s] 90%|█████████ | 45/50 [00:10<00:01,  4.32it/s] 92%|█████████▏| 46/50 [00:10<00:00,  4.32it/s] 94%|█████████▍| 47/50 [00:11<00:00,  4.33it/s] 96%|█████████▌| 48/50 [00:11<00:00,  4.33it/s] 98%|█████████▊| 49/50 [00:11<00:00,  4.33it/s]100%|██████████| 50/50 [00:11<00:00,  4.33it/s]100%|██████████| 50/50 [00:11<00:00,  4.24it/s]
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:02:47 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 03:02:47 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 03:02:48 [parallel_state.py:247] world_size=2 rank=1 local_rank=1 distributed_init_method=tcp://<ip>:47561 backend=nccl
+DEBUG 11-20 03:02:48 [parallel_state.py:247] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://<ip>:47561 backend=nccl
+INFO 11-20 03:02:48 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+INFO 11-20 03:02:48 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+The config attributes {'pooled_projection_dim': 768} were passed to xFuserQwenImageTransformerWrapper, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading checkpoint shards:   0%|          | 0/9 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 6/9 [00:00<00:00, 52.92it/s]Loading checkpoint shards: 100%|██████████| 9/9 [00:00<00:00, 56.02it/s]
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+[transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 12.94it/s][transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s]Loading weights:  93%|█████████▎| 678/729 [00:00<00:00, 6759.54it/s]Loading weights: 100%|██████████| 729/729 [00:00<00:00, 6876.43it/s]
+
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 729/729 [00:00<00:00, 7618.50it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  8.47it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  9.03it/s]
+INFO 11-20 03:03:38 [config.py:221] Pipeline patch number not set, using default value 1
+WARNING 11-20 03:03:38 [logger.py:126] Using FLASH as attention backend.
+wrapper attention backend: FLASH
+INFO 11-20 03:03:39 [config.py:221] Pipeline patch number not set, using default value 1
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:34,  3.14s/it]  4%|▍         | 2/50 [00:03<01:12,  1.52s/it]  6%|▌         | 3/50 [00:03<00:46,  1.00it/s]  8%|▊         | 4/50 [00:04<00:34,  1.33it/s] 10%|█         | 5/50 [00:04<00:27,  1.62it/s] 12%|█▏        | 6/50 [00:05<00:23,  1.87it/s] 14%|█▍        | 7/50 [00:05<00:20,  2.07it/s] 16%|█▌        | 8/50 [00:05<00:18,  2.22it/s] 18%|█▊        | 9/50 [00:06<00:17,  2.34it/s] 20%|██        | 10/50 [00:06<00:16,  2.43it/s] 22%|██▏       | 11/50 [00:06<00:15,  2.49it/s] 24%|██▍       | 12/50 [00:07<00:14,  2.54it/s] 26%|██▌       | 13/50 [00:07<00:14,  2.56it/s] 28%|██▊       | 14/50 [00:08<00:13,  2.59it/s] 30%|███       | 15/50 [00:08<00:13,  2.61it/s] 32%|███▏      | 16/50 [00:08<00:12,  2.63it/s] 34%|███▍      | 17/50 [00:09<00:12,  2.64it/s] 36%|███▌      | 18/50 [00:09<00:12,  2.63it/s] 38%|███▊      | 19/50 [00:09<00:11,  2.64it/s] 40%|████      | 20/50 [00:10<00:11,  2.65it/s] 42%|████▏     | 21/50 [00:10<00:10,  2.65it/s] 44%|████▍     | 22/50 [00:11<00:10,  2.64it/s] 46%|████▌     | 23/50 [00:11<00:10,  2.65it/s] 48%|████▊     | 24/50 [00:11<00:09,  2.65it/s] 50%|█████     | 25/50 [00:12<00:09,  2.65it/s] 52%|█████▏    | 26/50 [00:12<00:09,  2.65it/s] 54%|█████▍    | 27/50 [00:12<00:08,  2.66it/s] 56%|█████▌    | 28/50 [00:13<00:08,  2.66it/s] 58%|█████▊    | 29/50 [00:13<00:07,  2.64it/s] 60%|██████    | 30/50 [00:14<00:07,  2.65it/s] 62%|██████▏   | 31/50 [00:14<00:07,  2.65it/s] 64%|██████▍   | 32/50 [00:14<00:06,  2.64it/s] 66%|██████▌   | 33/50 [00:15<00:06,  2.65it/s] 68%|██████▊   | 34/50 [00:15<00:06,  2.65it/s] 70%|███████   | 35/50 [00:15<00:05,  2.65it/s] 72%|███████▏  | 36/50 [00:16<00:05,  2.65it/s] 74%|███████▍  | 37/50 [00:16<00:04,  2.66it/s] 76%|███████▌  | 38/50 [00:17<00:04,  2.66it/s] 78%|███████▊  | 39/50 [00:17<00:04,  2.64it/s] 80%|████████  | 40/50 [00:17<00:03,  2.65it/s] 82%|████████▏ | 41/50 [00:18<00:03,  2.65it/s] 84%|████████▍ | 42/50 [00:18<00:03,  2.64it/s] 86%|████████▌ | 43/50 [00:18<00:02,  2.64it/s] 88%|████████▊ | 44/50 [00:19<00:02,  2.65it/s] 90%|█████████ | 45/50 [00:19<00:01,  2.64it/s] 92%|█████████▏| 46/50 [00:20<00:01,  2.65it/s] 94%|█████████▍| 47/50 [00:20<00:01,  2.65it/s] 96%|█████████▌| 48/50 [00:20<00:00,  2.65it/s] 98%|█████████▊| 49/50 [00:21<00:00,  2.66it/s]100%|██████████| 50/50 [00:21<00:00,  2.63it/s]100%|██████████| 50/50 [00:21<00:00,  2.31it/s]
+[rank0]:[W1120 03:04:02.333512872 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 03:04:15 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+The config attributes {'pooled_projection_dim': 768} were passed to QwenImageTransformer2DModel, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading checkpoint shards:   0%|          | 0/9 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 6/9 [00:00<00:00, 53.15it/s]Loading checkpoint shards: 100%|██████████| 9/9 [00:00<00:00, 56.24it/s]
+{
+  "model": "qwen-image",
+  "ulysses_degree": 2,
+  "dtype": "bfloat16",
+  "calls": 100,
+  "independent_trajectory": {
+    "first": 0.02403568013989371,
+    "last": 0.23872497889435676,
+    "max": 0.23872497889435676
+  },
+  "stock_math_kernel_trajectory": null,
+  "same_input": {
+    "first": 0.02403568013989371,
+    "last": 0.017339834997200754,
+    "max": 0.03549177606506153
+  },
+  "sample_psnr_db": [
+    22.48928944886737,
+    31.34643896044396
+  ]
+}

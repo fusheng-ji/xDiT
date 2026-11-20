@@ -1,0 +1,18 @@
+SAGE-pr-u2 vs SAGE-1gpu: 46.53 dB, max diff 24, shape (9, 464, 848, 3)
+SAGE-nozero-u2 vs SAGE-1gpu: 46.53 dB, max diff 24, shape (9, 464, 848, 3)
+IndexError: list index out of range
+SAGE-pr-r2 vs SAGE-1gpu: 41.62 dB, max diff 42, shape (9, 464, 848, 3)
+IndexError: list index out of range
+SAGE-pr-u2 vs SAGE-nozero-u2: identical, max diff 0, shape (9, 464, 848, 3)
+FLASH_3_FP8-pr-u2 vs FLASH_3_FP8-1gpu: 42.32 dB, max diff 38, shape (9, 464, 848, 3)
+FLASH_3_FP8-nozero-u2 vs FLASH_3_FP8-1gpu: 42.32 dB, max diff 38, shape (9, 464, 848, 3)
+IndexError: list index out of range
+FLASH_3_FP8-pr-r2 vs FLASH_3_FP8-1gpu: 35.98 dB, max diff 54, shape (9, 464, 848, 3)
+IndexError: list index out of range
+FLASH_3_FP8-pr-u2 vs FLASH_3_FP8-nozero-u2: identical, max diff 0, shape (9, 464, 848, 3)
+FLASH_3-pr-u2 vs FLASH_3-1gpu: identical, max diff 0, shape (9, 464, 848, 3)
+FLASH_3-nozero-u2 vs FLASH_3-1gpu: identical, max diff 0, shape (9, 464, 848, 3)
+IndexError: list index out of range
+FLASH_3-pr-r2 vs FLASH_3-1gpu: 47.60 dB, max diff 16, shape (9, 464, 848, 3)
+IndexError: list index out of range
+FLASH_3-pr-u2 vs FLASH_3-nozero-u2: identical, max diff 0, shape (9, 464, 848, 3)

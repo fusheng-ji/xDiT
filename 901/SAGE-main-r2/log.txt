@@ -1,0 +1,316 @@
+head 920d042d6519640584efc074c09304df9da1c625
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 06:04:22 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 06:04:23 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+WARNING 11-20 06:04:23 [args.py:1839] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 06:04:23 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+WARNING 11-20 06:04:23 [args.py:1839] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 06:04:23 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+INFO 11-20 06:04:23 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 06:04:23 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 06:04:23 [runner_utils.py:31] Model Runner Arguments:
+INFO 11-20 06:04:23 [runner_utils.py:31]   model: HunyuanVideo
+INFO 11-20 06:04:23 [runner_utils.py:31]   lora_path: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   lora_weight_name: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   lora_scale: 1.0
+INFO 11-20 06:04:23 [runner_utils.py:31]   vdn_transformer_dir: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vdn_window_backend: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_parallel_vae: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_torch_compile: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   attention_backend: SAGE
+INFO 11-20 06:04:23 [runner_utils.py:31]   cross_attention_backend: None
+INFO 11-20 06:04:23 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   mha_v4_kv_splits: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   attention_a2a: none
+INFO 11-20 06:04:23 [runner_utils.py:31]   attention_a2a_hadamard: auto
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_cfg_parallel: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   data_parallel_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   ulysses_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   ring_degree: 2
+INFO 11-20 06:04:23 [runner_utils.py:31]   pipefusion_parallel_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_pipeline_patch: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   attn_layer_num_for_pp: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   warmup_steps: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   tensor_parallel_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   text_encoder_tp_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   fully_shard_degree: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   fully_shard_components: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   reshard_after_forward: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   memory_efficient_sharding: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   memory_efficient_replicated_load: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   height: 464
+INFO 11-20 06:04:23 [runner_utils.py:31]   width: 848
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_frames: 9
+INFO 11-20 06:04:23 [runner_utils.py:31]   prompt: ['A cat walks on the grass, realistic style.']
+INFO 11-20 06:04:23 [runner_utils.py:31]   negative_prompt: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_inference_steps: 4
+INFO 11-20 06:04:23 [runner_utils.py:31]   max_sequence_length: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   seed: 42
+INFO 11-20 06:04:23 [runner_utils.py:31]   guidance_scale: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   guidance_scale_2: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   flow_shift: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   enable_sequential_cpu_offload: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   enable_model_cpu_offload: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   enable_group_cpu_offload: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   group_offload_low_cpu_mem: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   enable_tiling: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   enable_slicing: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   vae_tile_size_height: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vae_tile_size_width: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vae_tile_overlap_height: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vae_tile_overlap_width: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   gemm_quantization: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   gemm_config: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_int8_gemms: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_fp8_gemms: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_fp8_text_encoder: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_fp4_gemms: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   fp8_precision_override_prefix_patterns: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   fp8_precision_override_suffix_patterns: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   ulysses_a2a: default
+INFO 11-20 06:04:23 [runner_utils.py:31]   ulysses_sdma_head_groups: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   ulysses_sdma_group_streams: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   ulysses_sdma_overlap_qkv: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_fp8_comms: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   fp8_comms_scale: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   fp8_comms_safety_factor: 0.85
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_iterations: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   determinism_check: 0
+INFO 11-20 06:04:23 [runner_utils.py:31]   determinism_check_report_ranks: last
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile_wait: 2
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile_warmup: 2
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile_active: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile_capture_phase: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   profile_with_stack: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   warmup_calls: 0
+INFO 11-20 06:04:23 [runner_utils.py:31]   output_directory: <repo>/../h100-results/901/SAGE-main-r2
+INFO 11-20 06:04:23 [runner_utils.py:31]   input_images: []
+INFO 11-20 06:04:23 [runner_utils.py:31]   resize_input_images: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   task: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   batch_size: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   dataset_path: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_hybrid_attn_schedule: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   hybrid_attn_low_precision_backend: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   hybrid_attn_high_precision_backend: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_hybrid_attn_high_precision_steps: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   hybrid_attn_schedule: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_hybrid_gemm_schedule: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   num_hybrid_gemm_high_precision_steps: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_vae_channels_last_format: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_ssta_sparse_text_to_image: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   spargeattn_simthreshold: 0.3
+INFO 11-20 06:04:23 [runner_utils.py:31]   spargeattn_cdfthreshold: 0.92
+INFO 11-20 06:04:23 [runner_utils.py:31]   spargeattn_reorder_sequence: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_spargeattn_static_block_mask: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_sparseattn_head_balance: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_spargeattn_head_balance: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   sparseattn_block_size: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   solattn_beta: 0.5
+INFO 11-20 06:04:23 [runner_utils.py:31]   solattn_beta_schedule: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   solattn_tilt_rank: 0
+INFO 11-20 06:04:23 [runner_utils.py:31]   sol_attn_tau: 0.2
+INFO 11-20 06:04:23 [runner_utils.py:31]   sol_attn_thresh_type: exact
+INFO 11-20 06:04:23 [runner_utils.py:31]   sol_attn_kv_splits: auto
+INFO 11-20 06:04:23 [runner_utils.py:31]   sol_attn_sink_tokens: 0
+INFO 11-20 06:04:23 [runner_utils.py:31]   sol_attn_sink_start: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_block_size: 128
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_top_k: 1
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_top_k_ratio: 0.0
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_drop_rates: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_prob_threshold: 0.9
+INFO 11-20 06:04:23 [runner_utils.py:31]   bsa_sparsity: 0.75
+INFO 11-20 06:04:23 [runner_utils.py:31]   bsa_cdf_threshold: 0.2
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_reorder_sequence: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_vsa_static_block_mask: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_vsa_first_frame_mask: True
+INFO 11-20 06:04:23 [runner_utils.py:31]   vsa_collect_density: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   distilled_transformer_path: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   distilled_transformer_2_path: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   audio_prompt: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_teacache: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   use_fbcache: False
+INFO 11-20 06:04:23 [runner_utils.py:31]   cache_method: None
+INFO 11-20 06:04:23 [runner_utils.py:31]   cache_config: None
+INFO 11-20 06:04:23 [runner_utils.py:31] Parameter 'guidance_scale' not specified. Using model-specific default value: 6.0
+INFO 11-20 06:04:23 [runner_utils.py:31] Parameter 'num_hybrid_attn_high_precision_steps' not specified. Using model-specific default value: 5
+INFO 11-20 06:04:23 [runner_utils.py:31] Initializing model: HunyuanVideo
+INFO 11-20 06:04:23 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 06:04:23 [runner_utils.py:31] Loading model pipeline...
+<venv>/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00, 71.11it/s]
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 2349.74it/s]
+Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:01,  4.63it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 3334.46it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:00,  4.95it/s]Loading weights:   0%|          | 1/290 [00:00<01:39,  2.89it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s][ALoading weights:  13%|█▎        | 39/290 [00:00<00:02, 104.35it/s]Loading weights:  20%|█▉        | 57/290 [00:00<00:02, 95.02it/s] Loading weights:  24%|██▍       | 71/290 [00:00<00:02, 99.05it/s]
+Loading weights:   0%|          | 1/290 [00:00<02:28,  1.94it/s][ALoading weights:  29%|██▉       | 84/290 [00:00<00:02, 92.14it/s]
+Loading weights:  13%|█▎        | 39/290 [00:00<00:03, 74.42it/s][ALoading weights:  35%|███▌      | 102/290 [00:01<00:01, 100.07it/s]
+Loading weights:  19%|█▊        | 54/290 [00:00<00:02, 90.01it/s][ALoading weights:  39%|███▉      | 114/290 [00:01<00:01, 102.22it/s]
+Loading weights:  24%|██▍       | 69/290 [00:00<00:02, 88.36it/s][ALoading weights:  43%|████▎     | 126/290 [00:01<00:01, 105.75it/s]
+Loading weights:  28%|██▊       | 81/290 [00:01<00:02, 90.80it/s][ALoading weights:  48%|████▊     | 138/290 [00:01<00:01, 96.03it/s] 
+Loading weights:  32%|███▏      | 93/290 [00:01<00:02, 92.75it/s][ALoading weights:  51%|█████▏    | 149/290 [00:01<00:01, 95.06it/s]
+Loading weights:  37%|███▋      | 107/290 [00:01<00:01, 103.24it/s][ALoading weights:  55%|█████▍    | 159/290 [00:01<00:01, 94.82it/s]
+Loading weights:  41%|████      | 119/290 [00:01<00:01, 105.07it/s][ALoading weights:  58%|█████▊    | 169/290 [00:01<00:01, 93.66it/s]
+Loading weights:  45%|████▌     | 131/290 [00:01<00:01, 98.34it/s] [ALoading weights:  62%|██████▏   | 179/290 [00:01<00:01, 86.09it/s]
+Loading weights:  49%|████▉     | 142/290 [00:01<00:01, 90.28it/s][ALoading weights:  66%|██████▌   | 192/290 [00:02<00:01, 90.50it/s]Loading weights:  70%|███████   | 203/290 [00:02<00:00, 92.01it/s]
+Loading weights:  54%|█████▍    | 156/290 [00:01<00:01, 93.32it/s][A
+Loading weights:  59%|█████▊    | 170/290 [00:01<00:01, 101.50it/s][ALoading weights:  76%|███████▌  | 219/290 [00:02<00:00, 90.67it/s]
+Loading weights:  63%|██████▎   | 183/290 [00:02<00:01, 99.76it/s] [ALoading weights:  81%|████████  | 235/290 [00:02<00:00, 106.39it/s]
+Loading weights:  67%|██████▋   | 194/290 [00:02<00:00, 101.52it/s][A
+Loading weights:  71%|███████▏  | 207/290 [00:02<00:00, 105.47it/s][ALoading weights:  85%|████████▌ | 247/290 [00:02<00:00, 90.89it/s] Loading weights:  89%|████████▊ | 257/290 [00:02<00:00, 88.15it/s]
+Loading weights:  76%|███████▌  | 219/290 [00:02<00:00, 99.05it/s] [A
+Loading weights:  79%|███████▉  | 230/290 [00:02<00:00, 94.96it/s][ALoading weights:  94%|█████████▍| 273/290 [00:02<00:00, 94.39it/s]
+Loading weights:  84%|████████▍ | 243/290 [00:02<00:00, 102.99it/s][ALoading weights:  98%|█████████▊| 283/290 [00:03<00:00, 95.09it/s]Loading weights: 100%|██████████| 290/290 [00:03<00:00, 93.78it/s]
+
+Loading weights:  91%|█████████ | 264/290 [00:02<00:00, 118.48it/s][A
+Loading weights:  97%|█████████▋| 282/290 [00:02<00:00, 132.28it/s][ALoading weights: 100%|██████████| 290/290 [00:02<00:00, 99.10it/s] 
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:04<00:04,  1.52s/it]DEBUG 11-20 06:04:29 [runner_utils.py:29] Replacing tokenizer 'tokenizer' (type=LlamaTokenizer) with PreTrainedTokenizerFast...
+Loading pipeline components...: 100%|██████████| 7/7 [00:05<00:00,  1.31it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:05<00:00,  1.30it/s]
+INFO 11-20 06:04:29 [runner_utils.py:31] Fixed tokenizer 'tokenizer': reloaded as PreTrainedTokenizerFast (transformers v5 LlamaTokenizer bug workaround)
+INFO 11-20 06:04:29 [runner_utils.py:31] Initializing runtime state...
+WARNING 11-20 06:04:30 [logger.py:126] Model parallel is not initialized, initializing...
+WARNING 11-20 06:04:30 [logger.py:126] Using SAGE as attention backend.
+WARNING 11-20 06:04:30 [logger.py:126] Low-precision attention backend is enabled. This may cause poor quality outputs, consider using hybrid attention if possible.
+INFO 11-20 06:04:54 [runner_utils.py:31] Enabling VAE tiling on AutoencoderKLHunyuanVideo...
+INFO 11-20 06:04:54 [runner_utils.py:31] Model initialization complete.
+INFO 11-20 06:04:54 [runner_utils.py:31] Running model...
+INFO 11-20 06:04:54 [runner_utils.py:31] Running iteration 1/1
+  0%|          | 0/4 [00:00<?, ?it/s]  0%|          | 0/4 [00:02<?, ?it/s]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "<repo>/h100-handoff/drive.py", line 54, in <module>
+[rank1]:     runpy.run_module("xfuser.runner", run_name="__main__", alter_sys=True)
+[rank1]:   File "<frozen runpy>", line 226, in run_module
+[rank1]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank1]:   File "<frozen runpy>", line 88, in _run_code
+[rank1]:   File "<trees>/main/xfuser/runner.py", line 189, in <module>
+[rank1]:     main()
+[rank1]:   File "<trees>/main/xfuser/runner.py", line 181, in main
+[rank1]:     output, timings = runner.run(input_args)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/main/xfuser/runner.py", line 106, in run
+[rank1]:     output, timings = self.model.run(input_args)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/main/xfuser/model_executor/models/runner_models/base_model.py", line 1374, in run
+[rank1]:     output, timing = self._run_timed_pipe(input_args)
+[rank1]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/main/xfuser/model_executor/models/runner_models/base_model.py", line 1583, in _run_timed_pipe
+[rank1]:     out = self._run_pipe(input_args)
+[rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/main/xfuser/model_executor/models/runner_models/hunyuan.py", line 141, in _run_pipe
+[rank1]:     output = self.pipe(
+[rank1]:              ^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/diffusers/pipelines/hunyuan_video/pipeline_hunyuan_video.py", line 676, in __call__
+[rank1]:     noise_pred = self.transformer(
+[rank1]:                  ^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "<trees>/main/xfuser/model_executor/models/transformers/transformer_hunyuan_video.py", line 329, in forward
+[rank1]:     hidden_states = hidden_states.reshape(batch_size,
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: RuntimeError: shape '[1, 3, 29, 53, -1, 1, 2, 2]' is invalid for input of size 295040
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<repo>/h100-handoff/drive.py", line 54, in <module>
+[rank0]:     runpy.run_module("xfuser.runner", run_name="__main__", alter_sys=True)
+[rank0]:   File "<frozen runpy>", line 226, in run_module
+[rank0]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "<trees>/main/xfuser/runner.py", line 189, in <module>
+[rank0]:     main()
+[rank0]:   File "<trees>/main/xfuser/runner.py", line 181, in main
+[rank0]:     output, timings = runner.run(input_args)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/main/xfuser/runner.py", line 106, in run
+[rank0]:     output, timings = self.model.run(input_args)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/main/xfuser/model_executor/models/runner_models/base_model.py", line 1374, in run
+[rank0]:     output, timing = self._run_timed_pipe(input_args)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/main/xfuser/model_executor/models/runner_models/base_model.py", line 1583, in _run_timed_pipe
+[rank0]:     out = self._run_pipe(input_args)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/main/xfuser/model_executor/models/runner_models/hunyuan.py", line 141, in _run_pipe
+[rank0]:     output = self.pipe(
+[rank0]:              ^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/diffusers/pipelines/hunyuan_video/pipeline_hunyuan_video.py", line 676, in __call__
+[rank0]:     noise_pred = self.transformer(
+[rank0]:                  ^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<venv>/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "<trees>/main/xfuser/model_executor/models/transformers/transformer_hunyuan_video.py", line 329, in forward
+[rank0]:     hidden_states = hidden_states.reshape(batch_size,
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: shape '[1, 3, 29, 53, -1, 1, 2, 2]' is invalid for input of size 295168
+[rank0]:[W1120 06:04:58.599096552 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1120 06:04:59.554000 3991467 torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 3991503 closing signal SIGTERM
+E1120 06:05:00.073000 3991467 torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 1 (pid: 3991504) of binary: <venv>/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1020, in <module>
+    main()
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<venv>/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+<repo>/h100-handoff/drive.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-11-20_06:05:00
+  host      : <host>
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 3991503)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 3991503
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-20_06:04:59
+  host      : <host>
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3991504) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+exit 1

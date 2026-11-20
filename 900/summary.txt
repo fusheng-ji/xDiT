@@ -1,0 +1,18 @@
+IndexError: list index out of range
+IndexError: list index out of range
+IndexError: list index out of range
+IndexError: list index out of range
+IndexError: list index out of range
+IndexError: list index out of range
+FLASH_3_FP8-pr-u2 vs FLASH_3_FP8-1gpu: 54.73 dB, max diff 22, shape (1024, 1024, 3)
+FLASH_3_FP8-nozero-u2 vs FLASH_3_FP8-1gpu: 54.77 dB, max diff 20, shape (1024, 1024, 3)
+FLASH_3_FP8-main-u2 vs FLASH_3_FP8-1gpu: 54.84 dB, max diff 18, shape (1024, 1024, 3)
+FLASH_3_FP8-pr-r2 vs FLASH_3_FP8-1gpu: 53.00 dB, max diff 24, shape (1024, 1024, 3)
+FLASH_3_FP8-main-r2 vs FLASH_3_FP8-1gpu: 48.36 dB, max diff 51, shape (1024, 1024, 3)
+FLASH_3_FP8-pr-u2 vs FLASH_3_FP8-nozero-u2: 57.71 dB, max diff 14, shape (1024, 1024, 3)
+FLASH_3-pr-u2 vs FLASH_3-1gpu: identical, max diff 0, shape (1024, 1024, 3)
+FLASH_3-nozero-u2 vs FLASH_3-1gpu: identical, max diff 0, shape (1024, 1024, 3)
+FLASH_3-main-u2 vs FLASH_3-1gpu: 57.66 dB, max diff 13, shape (1024, 1024, 3)
+FLASH_3-pr-r2 vs FLASH_3-1gpu: 54.42 dB, max diff 21, shape (1024, 1024, 3)
+FLASH_3-main-r2 vs FLASH_3-1gpu: 53.78 dB, max diff 23, shape (1024, 1024, 3)
+FLASH_3-pr-u2 vs FLASH_3-nozero-u2: identical, max diff 0, shape (1024, 1024, 3)

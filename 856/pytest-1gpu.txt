@@ -1,0 +1,122 @@
+..........sss.........sss....................sssssssssssssssssssssssssss [ 30%]
+ss................................ssssssssssss....ssssssssssssssssssssss [ 61%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssss.............sssss.. [ 92%]
+...s....F.ss.Fsss                                                        [100%]
+=================================== FAILURES ===================================
+______________ test_a_sharded_encoder_still_records_hidden_states ______________
+
+single_rank_process_group = <torch.distributed.distributed_c10d.ProcessGroup object at 0x7539cc527670>
+
+    def test_a_sharded_encoder_still_records_hidden_states(single_rank_process_group):
+        from xfuser.core.distributed.sharding import shard_component
+    
+        encoder = shard_component(
+            _tiny_qwen3(),
+            ["layers"],
+            process_group=single_rank_process_group,
+            device_id=0,
+            memory_efficient_init=True,
+        )
+    
+        hidden_states = _hidden_states(encoder)
+>       assert hidden_states is not None, (
+            "sharding the encoder silently stopped transformers recording hidden states; "
+            "the pipeline that reads hidden_states[-2] will fail with a TypeError"
+        )
+E       AssertionError: sharding the encoder silently stopped transformers recording hidden states; the pipeline that reads hidden_states[-2] will fail with a TypeError
+E       assert None is not None
+
+tests/integration/accelerator/model_executor/loading/test_sharded_text_encoder_outputs.py:90: AssertionError
+________ test_text_cross_attention_on_cudnn_attends_only_to_valid_text _________
+
+text_cross_attention = LTX2Attention(
+  (norm_q): RMSNorm((128,), eps=1e-06, elementwise_affine=True)
+  (norm_k): RMSNorm((128,), eps=1e-06, ... ModuleList(
+    (0): Linear(in_features=128, out_features=128, bias=True)
+    (1): Dropout(p=0.0, inplace=False)
+  )
+)
+
+    @torch.no_grad()
+    def test_text_cross_attention_on_cudnn_attends_only_to_valid_text(text_cross_attention):
+        generator = torch.Generator(device="cuda").manual_seed(1)
+        hidden_states = torch.randn(2, 40, 128, device="cuda", dtype=torch.bfloat16, generator=generator)
+        text = torch.randn(2, 24, 128, device="cuda", dtype=torch.bfloat16, generator=generator)
+        valid = torch.zeros(2, 24, dtype=torch.long, device="cuda")
+        valid[0, :9] = 1
+        valid[1, :21] = 1
+    
+        runtime_state = SimpleNamespace(attention_backend=AttentionBackendType.CUDNN)
+        with mock.patch("xfuser.model_executor.layers.usp.get_runtime_state", return_value=runtime_state):
+>           out = text_cross_attention(
+                hidden_states, encoder_hidden_states=text, attention_mask=make_attn_mask_with_meta(valid)
+            )
+
+tests/integration/accelerator/model_executor/models/transformers/test_ltx2_cross_attention_cudnn.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../xdit-env/lib/python3.12/site-packages/torch/nn/modules/module.py:1778: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../xdit-env/lib/python3.12/site-packages/torch/nn/modules/module.py:1789: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../xdit-env/lib/python3.12/site-packages/diffusers/models/transformers/transformer_ltx2.py:406: in forward
+    hidden_states = self.processor(
+xfuser/model_executor/models/transformers/transformer_ltx2.py:246: in __call__
+    hidden_states = self.attention_method(
+xfuser/model_executor/layers/usp.py:1198: in attention
+    out, _ = attention_function(
+xfuser/model_executor/layers/usp.py:707: in wrapper
+    return func(query, key, value, dropout_p=dropout_p, is_causal=is_causal, attention_kwargs=attention_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xfuser/model_executor/layers/usp.py:672: in call
+    step=_current_step(),
+         ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _current_step() -> Optional[torch.Tensor]:
+        """The runtime's step, or None when there is no runtime -- the same fallback as above."""
+        if not runtime_state_is_initialized():
+            return None
+>       return get_runtime_state().current_step()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'current_step'
+
+xfuser/model_executor/layers/usp.py:645: AttributeError
+=============================== warnings summary ===============================
+../../xdit-env/lib/python3.12/site-packages/huggingface_hub/constants.py:302
+  <venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+    warnings.warn(
+
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
+  <venv>/lib/python3.12/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:365: 14 warnings
+  <venv>/lib/python3.12/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+../../xdit-env/lib/python3.12/site-packages/_pytest/python.py:144
+  <venv>/lib/python3.12/site-packages/_pytest/python.py:144: PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+  Test: tests/integration/accelerator/core/test_aiter_sol_attn.py::test_every_sol_row_holds_its_dense_sibling_across_cluster_separations, argvalues type: generator
+  Please convert to a list or tuple.
+  See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+
+tests/integration/accelerator/core/attention/test_triton_bsa.py::test_keeping_every_block_is_dense_attention[whole-blocks]
+tests/integration/accelerator/core/attention/test_triton_bsa.py::test_keeping_every_block_is_dense_attention[padded]
+tests/integration/accelerator/core/attention/test_triton_bsa.py::test_sparse_selection_drops_blocks
+tests/integration/accelerator/core/attention/test_triton_bsa.py::test_top_k_keeps_at_least_one_block
+tests/integration/accelerator/core/attention/test_triton_bsa.py::test_compiled_callers_run_the_same_kernel_launch
+  <venv>/lib/python3.12/site-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+    warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/integration/accelerator/model_executor/loading/test_sharded_text_encoder_outputs.py::test_a_sharded_encoder_still_records_hidden_states
+FAILED tests/integration/accelerator/model_executor/models/transformers/test_ltx2_cross_attention_cudnn.py::test_text_cross_attention_on_cudnn_attends_only_to_valid_text
+2 failed, 99 passed, 140 skipped, 2979 deselected, 26 warnings in 123.88s (0:02:03)

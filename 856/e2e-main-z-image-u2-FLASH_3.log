@@ -1,0 +1,61 @@
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 02:15:05 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:02,  1.68it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 65.68it/s]
+Loading pipeline components...:  80%|████████  | 4/5 [00:00<00:00,  7.13it/s]
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 398/398 [00:00<00:00, 7386.17it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  5.54it/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:20,  2.43it/s]  4%|▍         | 2/50 [00:00<00:12,  3.70it/s]  6%|▌         | 3/50 [00:00<00:10,  4.43it/s]  8%|▊         | 4/50 [00:00<00:09,  4.90it/s] 10%|█         | 5/50 [00:01<00:08,  5.20it/s] 12%|█▏        | 6/50 [00:01<00:08,  5.40it/s] 14%|█▍        | 7/50 [00:01<00:07,  5.53it/s] 16%|█▌        | 8/50 [00:01<00:07,  5.62it/s] 18%|█▊        | 9/50 [00:01<00:07,  5.69it/s] 20%|██        | 10/50 [00:01<00:06,  5.73it/s] 22%|██▏       | 11/50 [00:02<00:06,  5.76it/s] 24%|██▍       | 12/50 [00:02<00:06,  5.78it/s] 26%|██▌       | 13/50 [00:02<00:06,  5.79it/s] 28%|██▊       | 14/50 [00:02<00:06,  5.78it/s] 30%|███       | 15/50 [00:02<00:06,  5.79it/s] 32%|███▏      | 16/50 [00:02<00:05,  5.77it/s] 34%|███▍      | 17/50 [00:03<00:05,  5.76it/s] 36%|███▌      | 18/50 [00:03<00:05,  5.77it/s] 38%|███▊      | 19/50 [00:03<00:05,  5.77it/s] 40%|████      | 20/50 [00:03<00:05,  5.76it/s] 42%|████▏     | 21/50 [00:03<00:05,  5.76it/s] 44%|████▍     | 22/50 [00:04<00:04,  5.77it/s] 46%|████▌     | 23/50 [00:04<00:04,  5.77it/s] 48%|████▊     | 24/50 [00:04<00:04,  5.76it/s] 50%|█████     | 25/50 [00:04<00:04,  5.75it/s] 52%|█████▏    | 26/50 [00:04<00:04,  5.74it/s] 54%|█████▍    | 27/50 [00:04<00:04,  5.74it/s] 56%|█████▌    | 28/50 [00:05<00:03,  5.77it/s] 58%|█████▊    | 29/50 [00:05<00:03,  5.76it/s] 60%|██████    | 30/50 [00:05<00:03,  5.77it/s] 62%|██████▏   | 31/50 [00:05<00:03,  5.76it/s] 64%|██████▍   | 32/50 [00:05<00:03,  5.75it/s] 66%|██████▌   | 33/50 [00:05<00:02,  5.74it/s] 68%|██████▊   | 34/50 [00:06<00:02,  5.74it/s] 70%|███████   | 35/50 [00:06<00:02,  5.76it/s] 72%|███████▏  | 36/50 [00:06<00:02,  5.74it/s] 74%|███████▍  | 37/50 [00:06<00:02,  5.71it/s] 76%|███████▌  | 38/50 [00:06<00:02,  5.71it/s] 78%|███████▊  | 39/50 [00:06<00:01,  5.74it/s] 80%|████████  | 40/50 [00:07<00:01,  5.74it/s] 82%|████████▏ | 41/50 [00:07<00:01,  5.74it/s] 84%|████████▍ | 42/50 [00:07<00:01,  5.74it/s] 86%|████████▌ | 43/50 [00:07<00:01,  5.75it/s] 88%|████████▊ | 44/50 [00:07<00:01,  5.74it/s] 90%|█████████ | 45/50 [00:08<00:00,  5.73it/s] 92%|█████████▏| 46/50 [00:08<00:00,  5.73it/s] 94%|█████████▍| 47/50 [00:08<00:00,  5.73it/s] 96%|█████████▌| 48/50 [00:08<00:00,  5.76it/s] 98%|█████████▊| 49/50 [00:08<00:00,  5.75it/s]100%|██████████| 50/50 [00:08<00:00,  5.75it/s]100%|██████████| 50/50 [00:08<00:00,  5.61it/s]
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 02:15:46 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 02:15:46 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 02:15:46 [parallel_state.py:247] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://<ip>:54059 backend=nccl
+DEBUG 11-20 02:15:46 [parallel_state.py:247] world_size=2 rank=1 local_rank=1 distributed_init_method=tcp://<ip>:54059 backend=nccl
+INFO 11-20 02:15:46 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+INFO 11-20 02:15:46 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 65.02it/s]
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  40%|████      | 2/5 [00:00<00:00,  3.53it/s]Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 398/398 [00:00<00:00, 5891.44it/s]
+Loading weights: 100%|██████████| 398/398 [00:00<00:00, 5562.85it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  6.74it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  6.08it/s]
+INFO 11-20 02:16:05 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 02:16:06 [config.py:221] Pipeline patch number not set, using default value 1
+WARNING 11-20 02:16:06 [logger.py:126] Using FLASH_3 as attention backend.
+wrapper attention backend: FLASH_3
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:04<03:21,  4.12s/it]  6%|▌         | 3/50 [00:04<00:53,  1.14s/it] 10%|█         | 5/50 [00:04<00:27,  1.65it/s] 14%|█▍        | 7/50 [00:04<00:16,  2.56it/s] 18%|█▊        | 9/50 [00:04<00:11,  3.57it/s] 22%|██▏       | 11/50 [00:05<00:08,  4.62it/s] 26%|██▌       | 13/50 [00:05<00:06,  5.66it/s] 30%|███       | 15/50 [00:05<00:05,  6.62it/s] 34%|███▍      | 17/50 [00:05<00:04,  7.46it/s] 38%|███▊      | 19/50 [00:05<00:03,  8.16it/s] 42%|████▏     | 21/50 [00:06<00:03,  8.69it/s] 46%|████▌     | 23/50 [00:06<00:02,  9.10it/s] 50%|█████     | 25/50 [00:06<00:02,  9.39it/s] 54%|█████▍    | 27/50 [00:06<00:02,  9.62it/s] 58%|█████▊    | 29/50 [00:06<00:02,  9.77it/s] 62%|██████▏   | 31/50 [00:07<00:01,  9.90it/s] 66%|██████▌   | 33/50 [00:07<00:01, 10.01it/s] 70%|███████   | 35/50 [00:07<00:01, 10.00it/s] 74%|███████▍  | 37/50 [00:07<00:01, 10.06it/s] 78%|███████▊  | 39/50 [00:07<00:01, 10.13it/s] 82%|████████▏ | 41/50 [00:08<00:00, 10.18it/s] 86%|████████▌ | 43/50 [00:08<00:00, 10.11it/s] 90%|█████████ | 45/50 [00:08<00:00, 10.15it/s] 94%|█████████▍| 47/50 [00:08<00:00, 10.20it/s] 98%|█████████▊| 49/50 [00:08<00:00, 10.23it/s]100%|██████████| 50/50 [00:08<00:00,  5.60it/s]
+[rank0]:[W1120 02:16:16.744635944 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+DEBUG 11-20 02:16:26 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 64.37it/s]
+{
+  "model": "z-image",
+  "ulysses_degree": 2,
+  "dtype": "bfloat16",
+  "calls": 50,
+  "independent_trajectory": {
+    "first": 0.012050333302013336,
+    "last": 0.33316470623343986,
+    "max": 0.33316470623343986
+  },
+  "stock_math_kernel_trajectory": null,
+  "same_input": {
+    "first": 0.012050333302013336,
+    "last": 0.015670037145108586,
+    "max": 0.024503980857469392
+  },
+  "sample_psnr_db": [
+    29.984715575271114,
+    24.54935061852513
+  ]
+}
