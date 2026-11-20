@@ -1,55 +1,70 @@
-<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-  warnings.warn(
-DEBUG 11-20 02:32:13 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+DEBUG 11-20 20:51:20 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+<path>:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
   deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
-Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]Loading pipeline components...:  12%|█▎        | 1/8 [00:00<00:04,  1.65it/s]
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
-Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.08s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.81it/s]
-Loading pipeline components...:  25%|██▌       | 2/8 [00:01<00:05,  1.10it/s]
+Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][A
+Loading weights:  19%|█▉        | 64/338 [00:00<00:00, 633.86it/s][A
+Loading weights:  38%|███▊      | 128/338 [00:00<00:00, 580.64it/s][A
+Loading weights:  65%|██████▌   | 220/338 [00:00<00:00, 706.95it/s][A
+Loading weights:  88%|████████▊ | 297/338 [00:00<00:00, 709.99it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 717.46it/s]
+Loading pipeline components...:  12%|█▎        | 1/8 [00:00<00:05,  1.18it/s]Loading pipeline components...:  25%|██▌       | 2/8 [00:01<00:04,  1.42it/s]
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][A
+Loading weights:   2%|▏         | 2/111 [00:00<00:06, 16.58it/s][A
+Loading weights:   6%|▋         | 7/111 [00:00<00:03, 28.73it/s][A
+Loading weights:  19%|█▉        | 21/111 [00:00<00:01, 46.83it/s][A
+Loading weights:  28%|██▊       | 31/111 [00:00<00:01, 52.74it/s][A
+Loading weights:  33%|███▎      | 37/111 [00:00<00:01, 48.28it/s][A
+Loading weights:  39%|███▊      | 43/111 [00:00<00:01, 42.85it/s][A
+Loading weights:  44%|████▍     | 49/111 [00:01<00:01, 46.15it/s][A
+Loading weights:  49%|████▊     | 54/111 [00:01<00:01, 43.27it/s][A
+Loading weights:  55%|█████▍    | 61/111 [00:01<00:01, 38.93it/s][A
+Loading weights:  61%|██████▏   | 68/111 [00:01<00:00, 44.69it/s][A
+Loading weights:  66%|██████▌   | 73/111 [00:01<00:00, 39.43it/s][A
+Loading weights:  70%|███████   | 78/111 [00:01<00:00, 37.73it/s][A
+Loading weights:  76%|███████▌  | 84/111 [00:01<00:00, 42.56it/s][A
+Loading weights:  80%|████████  | 89/111 [00:02<00:00, 32.95it/s][A
+Loading weights:  86%|████████▌ | 95/111 [00:02<00:00, 35.90it/s][A
+Loading weights:  92%|█████████▏| 102/111 [00:02<00:00, 37.73it/s][A
+Loading weights:  96%|█████████▋| 107/111 [00:02<00:00, 39.00it/s][ALoading weights: 100%|██████████| 111/111 [00:02<00:00, 41.90it/s]
+Loading pipeline components...:  50%|█████     | 4/8 [00:04<00:04,  1.14s/it]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+
 Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s][A
-Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:07,  1.29s/it][A
-Loading checkpoint shards:  29%|██▊       | 2/7 [00:02<00:06,  1.31s/it][A
-Loading checkpoint shards:  43%|████▎     | 3/7 [00:03<00:04,  1.17s/it][A
-Loading checkpoint shards:  57%|█████▋    | 4/7 [00:04<00:02,  1.03it/s][A
-Loading checkpoint shards:  71%|███████▏  | 5/7 [00:04<00:01,  1.17it/s][A
-Loading checkpoint shards:  86%|████████▌ | 6/7 [00:05<00:00,  1.27it/s][A
-Loading checkpoint shards: 100%|██████████| 7/7 [00:06<00:00,  1.45it/s][ALoading checkpoint shards: 100%|██████████| 7/7 [00:06<00:00,  1.15it/s]
-Loading pipeline components...:  38%|███▊      | 3/8 [00:07<00:16,  3.31s/it]
-Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 6750.51it/s]
-Loading pipeline components...:  50%|█████     | 4/8 [00:08<00:08,  2.08s/it]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
-
-Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][A
-Loading weights:  86%|████████▋ | 96/111 [00:00<00:00, 958.54it/s][ALoading weights: 100%|██████████| 111/111 [00:00<00:00, 994.00it/s]
-Loading pipeline components...: 100%|██████████| 8/8 [00:08<00:00,  1.48it/s]Loading pipeline components...: 100%|██████████| 8/8 [00:08<00:00,  1.04s/it]
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:25,  1.35s/it] 10%|█         | 2/20 [00:02<00:21,  1.20s/it] 15%|█▌        | 3/20 [00:03<00:19,  1.14s/it] 20%|██        | 4/20 [00:04<00:17,  1.12s/it] 25%|██▌       | 5/20 [00:05<00:16,  1.11s/it] 30%|███       | 6/20 [00:06<00:15,  1.11s/it] 35%|███▌      | 7/20 [00:07<00:14,  1.10s/it] 40%|████      | 8/20 [00:08<00:13,  1.10s/it] 45%|████▌     | 9/20 [00:10<00:12,  1.10s/it] 50%|█████     | 10/20 [00:11<00:10,  1.10s/it] 55%|█████▌    | 11/20 [00:12<00:09,  1.10s/it] 60%|██████    | 12/20 [00:13<00:08,  1.10s/it] 65%|██████▌   | 13/20 [00:14<00:07,  1.11s/it] 70%|███████   | 14/20 [00:15<00:06,  1.11s/it] 75%|███████▌  | 15/20 [00:16<00:05,  1.12s/it] 80%|████████  | 16/20 [00:17<00:04,  1.12s/it] 85%|████████▌ | 17/20 [00:19<00:03,  1.12s/it] 90%|█████████ | 18/20 [00:20<00:02,  1.12s/it] 95%|█████████▌| 19/20 [00:21<00:01,  1.13s/it]100%|██████████| 20/20 [00:22<00:00,  1.13s/it]100%|██████████| 20/20 [00:22<00:00,  1.12s/it]
-<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-  warnings.warn(
-DEBUG 11-20 02:33:15 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-DEBUG 11-20 02:33:16 [parallel_state.py:247] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://<ip>:41133 backend=nccl
-INFO 11-20 02:33:16 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 1
-Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:06,  1.13s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:01<00:04,  1.17it/s]Loading checkpoint shards:  43%|████▎     | 3/7 [00:02<00:03,  1.31it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:03<00:02,  1.40it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:03<00:01,  1.46it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:04<00:00,  1.48it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.63it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.44it/s]
-<venv>/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
-  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
-Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]Loading pipeline components...:  12%|█▎        | 1/8 [00:00<00:04,  1.69it/s]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
-
-Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][A
-Loading weights:  95%|█████████▌| 106/111 [00:00<00:00, 1014.04it/s][ALoading weights: 100%|██████████| 111/111 [00:00<00:00, 1056.04it/s]
-Loading pipeline components...:  38%|███▊      | 3/8 [00:00<00:01,  4.04it/s]
+Loading checkpoint shards:  14%|█▍        | 1/7 [00:15<01:34, 15.79s/it][A
+Loading checkpoint shards:  29%|██▊       | 2/7 [00:30<01:16, 15.38s/it][A
+Loading checkpoint shards:  43%|████▎     | 3/7 [00:46<01:01, 15.42s/it][A
+Loading checkpoint shards:  57%|█████▋    | 4/7 [01:01<00:45, 15.14s/it][A
+Loading checkpoint shards:  71%|███████▏  | 5/7 [01:14<00:28, 14.41s/it][A
+Loading checkpoint shards:  86%|████████▌ | 6/7 [01:28<00:14, 14.50s/it][A
+Loading checkpoint shards: 100%|██████████| 7/7 [01:39<00:00, 13.32s/it][ALoading checkpoint shards: 100%|██████████| 7/7 [01:39<00:00, 14.25s/it]
+Loading pipeline components...:  88%|████████▊ | 7/8 [01:44<00:19, 19.57s/it]
 Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
-Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.01s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.94it/s]
-Loading pipeline components...:  75%|███████▌  | 6/8 [00:01<00:00,  3.18it/s]
-Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 6816.01it/s]
-Loading pipeline components...:  88%|████████▊ | 7/8 [00:02<00:00,  3.65it/s]Loading pipeline components...: 100%|██████████| 8/8 [00:02<00:00,  3.90it/s]
-INFO 11-20 02:33:38 [config.py:221] Pipeline patch number not set, using default value 1
-WARNING 11-20 02:33:38 [logger.py:126] Using FLASH_3 as attention backend.
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.58s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.23s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.88s/it]
+Loading pipeline components...: 100%|██████████| 8/8 [01:51<00:00, 17.04s/it]Loading pipeline components...: 100%|██████████| 8/8 [01:51<00:00, 13.99s/it]
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:28,  1.48s/it] 10%|█         | 2/20 [00:02<00:22,  1.25s/it] 15%|█▌        | 3/20 [00:03<00:20,  1.18s/it] 20%|██        | 4/20 [00:04<00:18,  1.14s/it] 25%|██▌       | 5/20 [00:05<00:16,  1.13s/it] 30%|███       | 6/20 [00:06<00:15,  1.11s/it] 35%|███▌      | 7/20 [00:08<00:14,  1.11s/it] 40%|████      | 8/20 [00:09<00:13,  1.11s/it] 45%|████▌     | 9/20 [00:10<00:12,  1.10s/it] 50%|█████     | 10/20 [00:11<00:10,  1.10s/it] 55%|█████▌    | 11/20 [00:12<00:09,  1.09s/it] 60%|██████    | 12/20 [00:13<00:08,  1.09s/it] 65%|██████▌   | 13/20 [00:14<00:07,  1.09s/it] 70%|███████   | 14/20 [00:15<00:06,  1.09s/it] 75%|███████▌  | 15/20 [00:16<00:05,  1.09s/it] 80%|████████  | 16/20 [00:17<00:04,  1.09s/it] 85%|████████▌ | 17/20 [00:18<00:03,  1.09s/it] 90%|█████████ | 18/20 [00:20<00:02,  1.09s/it] 95%|█████████▌| 19/20 [00:21<00:01,  1.09s/it]100%|██████████| 20/20 [00:22<00:00,  1.09s/it]100%|██████████| 20/20 [00:22<00:00,  1.11s/it]
+DEBUG 11-20 20:54:43 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 20:54:43 [parallel_state.py:247] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://<ip>:46555 backend=nccl
+INFO 11-20 20:54:43 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 1
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:08,  1.34s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:02<00:05,  1.04s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:02<00:03,  1.06it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:03<00:02,  1.12it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:04<00:01,  1.17it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:05<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:05<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:05<00:00,  1.17it/s]
+<path>:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 338/338 [00:00<00:00, 6580.06it/s]
+Loading pipeline components...:  12%|█▎        | 1/8 [00:00<00:01,  5.32it/s]Loading pipeline components...:  38%|███▊      | 3/8 [00:00<00:01,  3.64it/s]
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s][A
+Loading weights:  75%|███████▍  | 83/111 [00:00<00:00, 805.85it/s][ALoading weights: 100%|██████████| 111/111 [00:00<00:00, 870.50it/s]
+Loading pipeline components...:  50%|█████     | 4/8 [00:01<00:01,  3.69it/s]Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.28it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s]
+Loading pipeline components...:  88%|████████▊ | 7/8 [00:01<00:00,  3.66it/s]Loading pipeline components...: 100%|██████████| 8/8 [00:01<00:00,  4.23it/s]
+INFO 11-20 20:55:13 [config.py:221] Pipeline patch number not set, using default value 1
+WARNING 11-20 20:55:13 [logger.py:126] Using FLASH_3 as attention backend.
 wrapper attention backend: FLASH_3
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:15,  1.21it/s] 10%|█         | 2/20 [00:01<00:12,  1.40it/s] 15%|█▌        | 3/20 [00:02<00:11,  1.47it/s] 20%|██        | 4/20 [00:02<00:10,  1.52it/s] 25%|██▌       | 5/20 [00:03<00:09,  1.54it/s] 30%|███       | 6/20 [00:03<00:09,  1.55it/s] 35%|███▌      | 7/20 [00:04<00:08,  1.56it/s] 40%|████      | 8/20 [00:05<00:07,  1.56it/s] 45%|████▌     | 9/20 [00:05<00:07,  1.56it/s] 50%|█████     | 10/20 [00:06<00:06,  1.57it/s] 55%|█████▌    | 11/20 [00:07<00:05,  1.57it/s] 60%|██████    | 12/20 [00:07<00:05,  1.57it/s] 65%|██████▌   | 13/20 [00:08<00:04,  1.58it/s] 70%|███████   | 14/20 [00:09<00:03,  1.58it/s] 75%|███████▌  | 15/20 [00:09<00:03,  1.58it/s] 80%|████████  | 16/20 [00:10<00:02,  1.58it/s] 85%|████████▌ | 17/20 [00:10<00:01,  1.59it/s] 90%|█████████ | 18/20 [00:11<00:01,  1.57it/s] 95%|█████████▌| 19/20 [00:12<00:00,  1.56it/s]100%|██████████| 20/20 [00:12<00:00,  1.55it/s]100%|██████████| 20/20 [00:12<00:00,  1.55it/s]
-[rank0]:[W1120 02:33:55.572933218 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-  warnings.warn(
-DEBUG 11-20 02:34:08 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:00<00:04,  1.46it/s]Loading checkpoint shards:  29%|██▊       | 2/7 [00:01<00:03,  1.48it/s]Loading checkpoint shards:  43%|████▎     | 3/7 [00:02<00:02,  1.50it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:02<00:01,  1.51it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:03<00:01,  1.53it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:03<00:00,  1.54it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.67it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:04<00:00,  1.58it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:16,  1.14it/s] 10%|█         | 2/20 [00:01<00:13,  1.35it/s] 15%|█▌        | 3/20 [00:02<00:11,  1.44it/s] 20%|██        | 4/20 [00:02<00:10,  1.48it/s] 25%|██▌       | 5/20 [00:03<00:09,  1.50it/s] 30%|███       | 6/20 [00:04<00:09,  1.53it/s] 35%|███▌      | 7/20 [00:04<00:08,  1.54it/s] 40%|████      | 8/20 [00:05<00:07,  1.55it/s] 45%|████▌     | 9/20 [00:06<00:07,  1.54it/s] 50%|█████     | 10/20 [00:06<00:06,  1.55it/s] 55%|█████▌    | 11/20 [00:07<00:05,  1.56it/s] 60%|██████    | 12/20 [00:07<00:05,  1.56it/s] 65%|██████▌   | 13/20 [00:08<00:04,  1.56it/s] 70%|███████   | 14/20 [00:09<00:03,  1.56it/s] 75%|███████▌  | 15/20 [00:09<00:03,  1.56it/s] 80%|████████  | 16/20 [00:10<00:02,  1.56it/s] 85%|████████▌ | 17/20 [00:11<00:01,  1.56it/s] 90%|█████████ | 18/20 [00:11<00:01,  1.56it/s] 95%|█████████▌| 19/20 [00:12<00:00,  1.56it/s]100%|██████████| 20/20 [00:13<00:00,  1.56it/s]100%|██████████| 20/20 [00:13<00:00,  1.53it/s]
+[rank0]:[W1120 20:55:30.902185513 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+DEBUG 11-20 20:55:43 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:07,  1.29s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:02<00:05,  1.07s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:03<00:04,  1.03s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:04<00:02,  1.02it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:04<00:01,  1.06it/s]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:05<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:06<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 7/7 [00:06<00:00,  1.08it/s]
 {
   "model": "hunyuan-video-1.5",
   "ulysses_degree": 1,

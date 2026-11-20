@@ -1,9 +1,9 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.9, pytest-9.2.0, pluggy-1.7.0 -- <venv>/bin/python
-rootdir: <trees>/pr856
+platform linux -- Python 3.12.9, pytest-9.2.0, pluggy-1.7.0 -- <path>
+rootdir: <path>
 configfile: pytest.ini
 plugins: anyio-4.16.0, timeout-2.4.0
-collecting ... collected 81 items
+collecting ... collected 83 items
 
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-divisible] PASSED [  1%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-padded-image] PASSED [  2%]
@@ -13,70 +13,72 @@ tests/integration/accelerator/model_executor/models/test_sequence_parallel_paddi
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-batched-equal-lengths] PASSED [  7%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-batched-padded-image] PASSED [  8%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-batched-replicated-text] PASSED [  9%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-batched-u3] SKIPPED [ 11%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[hunyuan_video15-batched-u3] SKIPPED [ 10%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[ltx2-divisible] PASSED [ 12%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[ltx2-padded] PASSED [ 13%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[ltx2-interleaved-padded] PASSED [ 14%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-divisible] PASSED [ 16%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-padded-image] PASSED [ 17%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-divisible] PASSED [ 15%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-padded-image] PASSED [ 16%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-replicated-text] PASSED [ 18%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-padded-image-replicated-text] SKIPPED [ 19%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched] PASSED [ 20%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-equal-lengths] PASSED [ 22%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-padded-image] PASSED [ 23%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-equal-lengths] PASSED [ 21%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-padded-image] PASSED [ 22%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-replicated-text] PASSED [ 24%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-padded-image-u3] SKIPPED [ 25%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-padded-image-replicated-text-u3] SKIPPED [ 27%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-divisible] PASSED [ 28%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded] PASSED [ 29%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded-u3] SKIPPED [ 30%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-replicated-text] PASSED [ 32%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded-replicated-text-u3] SKIPPED [ 33%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-divisible] PASSED [ 34%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-padded-u3] SKIPPED [ 35%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched] PASSED [ 37%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched-padded-caption-u3] SKIPPED [ 38%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched-padded-unified-u3] SKIPPED [ 39%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-divisible] PASSED [ 40%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-padded] PASSED [ 41%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-padded-u3] SKIPPED [ 43%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-padded-video-sharded-text] PASSED [ 44%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-padded-video-joint-text] PASSED [ 45%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[ltx2-padded] PASSED [ 46%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[ltx2-interleaved-padded] PASSED [ 48%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-padded-image-sharded-text] PASSED [ 49%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-padded-image-joint-text] PASSED [ 50%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[flux2-padded] PASSED [ 51%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[flux2-padded-replicated-text] PASSED [ 53%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[cosmos3-padded-joint-keys] PASSED [ 54%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[zimage-padded-ring3] SKIPPED [ 55%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-hybrid-joint-text] SKIPPED [ 56%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-hybrid-joint-text] SKIPPED [ 58%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[cosmos3-hybrid-joint-keys] SKIPPED [ 59%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH] PASSED [ 60%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH_3] PASSED [ 61%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH_4] SKIPPED [ 62%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH] PASSED [ 64%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH_3] PASSED [ 65%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH_4] SKIPPED [ 66%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-u3-FLASH] SKIPPED [ 67%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-batched-padded-image-replicated-text-u3] SKIPPED [ 26%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-sharded-modulation-divisible] PASSED [ 27%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[qwen_image-sharded-modulation-padded-image-replicated-text] SKIPPED [ 28%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-divisible] PASSED [ 30%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded] PASSED [ 31%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded-u3] SKIPPED [ 32%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-replicated-text] PASSED [ 33%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[flux2-padded-replicated-text-u3] SKIPPED [ 34%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-divisible] PASSED [ 36%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-padded-u3] SKIPPED [ 37%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched] PASSED [ 38%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched-padded-caption-u3] SKIPPED [ 39%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[z_image-batched-padded-unified-u3] SKIPPED [ 40%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-divisible] PASSED [ 42%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-padded] PASSED [ 43%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ulysses_matches_single_device[cosmos3-padded-u3] SKIPPED [ 44%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-padded-video-sharded-text] PASSED [ 45%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-padded-video-joint-text] PASSED [ 46%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[ltx2-padded] PASSED [ 48%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[ltx2-interleaved-padded] PASSED [ 49%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-padded-image-sharded-text] PASSED [ 50%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-padded-image-joint-text] PASSED [ 51%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[flux2-padded] PASSED [ 53%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[flux2-padded-replicated-text] PASSED [ 54%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[cosmos3-padded-joint-keys] PASSED [ 55%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[zimage-padded-ring3] SKIPPED [ 56%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[hunyuan-hybrid-joint-text] SKIPPED [ 57%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[qwen-hybrid-joint-text] SKIPPED [ 59%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_ring_matches_single_device[cosmos3-hybrid-joint-keys] SKIPPED [ 60%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH] PASSED [ 61%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH_3] PASSED [ 62%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-FLASH_4] SKIPPED [ 63%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH] PASSED [ 65%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH_3] PASSED [ 66%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-joint-rear-FLASH_4] SKIPPED [ 67%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-u3-FLASH] SKIPPED [ 68%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-u3-FLASH_3] SKIPPED [ 69%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-u3-FLASH_4] SKIPPED [ 70%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-FLASH] PASSED [ 71%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-FLASH_3] PASSED [ 72%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[hunyuan_video15-batched-u3-FLASH_4] SKIPPED [ 71%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-FLASH] PASSED [ 72%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-FLASH_3] PASSED [ 73%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-FLASH_4] SKIPPED [ 74%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-FLASH] PASSED [ 75%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-FLASH_3] PASSED [ 76%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-FLASH_4] SKIPPED [ 77%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-FLASH_3] PASSED [ 77%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-FLASH_4] SKIPPED [ 78%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-padded-image-u3-FLASH] SKIPPED [ 79%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-padded-image-u3-FLASH_3] SKIPPED [ 80%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-padded-image-u3-FLASH_4] SKIPPED [ 81%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-padded-image-u3-FLASH] SKIPPED [ 82%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-padded-image-u3-FLASH_3] SKIPPED [ 83%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-padded-image-u3-FLASH] SKIPPED [ 83%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-padded-image-u3-FLASH_3] SKIPPED [ 84%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[qwen_image-batched-joint-front-padded-image-u3-FLASH_4] SKIPPED [ 85%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-FLASH] PASSED [ 86%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-FLASH_3] PASSED [ 87%]
-tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-FLASH_4] SKIPPED [ 88%]
+tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-FLASH_4] SKIPPED [ 89%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-padded-caption-u3-FLASH] SKIPPED [ 90%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-padded-caption-u3-FLASH_3] SKIPPED [ 91%]
 tests/integration/accelerator/model_executor/models/test_sequence_parallel_padding.py::test_batched_prompts_on_a_flash_backend_match_single_device[z_image-batched-padded-caption-u3-FLASH_4] SKIPPED [ 92%]
@@ -90,7 +92,7 @@ tests/integration/accelerator/model_executor/test_qwen_batched_prompts_ulysses.p
 =================================== FAILURES ===================================
 __________ test_a_padded_prompt_batch_matches_one_call_per_prompt[2] ___________
 
-accelerator_ranks = <function accelerator_ranks.<locals>.launch at 0x722fe8727560>
+accelerator_ranks = <function accelerator_ranks.<locals>.launch at 0x71a499d434c0>
 world_size = 2
 
     @pytest.mark.parametrize("world_size", [2, 4, 8])
@@ -103,8 +105,8 @@ tests/integration/accelerator/conftest.py:15: in launch
     spawn_accelerator_ranks(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-worker = <function _worker at 0x722feb59bc40>
-tmp_path = PosixPath('<work>/tmp/pytest-of-<user>/pytest-2/test_a_padded_prompt_batch_mat0')
+worker = <function _worker at 0x71a49bbe8720>
+tmp_path = PosixPath('<path>')
 world_size = 2, timeout = 300, init_filename = 'dist-init', args = ()
 
     def spawn_accelerator_ranks(worker, tmp_path, *, world_size, timeout=600, init_filename="dist-init", args=()):
@@ -162,57 +164,49 @@ E           Failed: exit codes: [1, 1]
 
 tests/integration/accelerator/_spawn.py:67: Failed
 ----------------------------- Captured stdout call -----------------------------
-DEBUG 11-20 03:31:52 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-DEBUG 11-20 03:31:52 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-DEBUG 11-20 03:31:52 [parallel_state.py:247] world_size=2 rank=0 local_rank=0 distributed_init_method=file://<work>/tmp/pytest-of-<user>/pytest-2/test_a_padded_prompt_batch_mat0/dist-init backend=nccl
-DEBUG 11-20 03:31:53 [parallel_state.py:247] world_size=2 rank=1 local_rank=1 distributed_init_method=file://<work>/tmp/pytest-of-<user>/pytest-2/test_a_padded_prompt_batch_mat0/dist-init backend=nccl
-INFO 11-20 03:31:53 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
-INFO 11-20 03:31:53 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+DEBUG 11-20 21:57:23 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 21:57:24 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 21:57:24 [parallel_state.py:247] world_size=2 rank=0 local_rank=0 distributed_init_method=file://<path> backend=nccl
+DEBUG 11-20 21:57:25 [parallel_state.py:247] world_size=2 rank=1 local_rank=1 distributed_init_method=file://<path> backend=nccl
+INFO 11-20 21:57:25 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
+INFO 11-20 21:57:25 [parallel_state.py:432] sequence_parallel_degree is not provided, using ring_degree * ulysses_degree = 2
 ----------------------------- Captured stderr call -----------------------------
-<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-  warnings.warn(
-<venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-  warnings.warn(
-Process SpawnProcess-87:
+Process SpawnProcess-90:
+Process SpawnProcess-89:
 Traceback (most recent call last):
-  File "<home>/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+Traceback (most recent call last):
+  File "<path>", line 314, in _bootstrap
     self.run()
-  File "<home>/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+  File "<path>", line 108, in run
     self._target(*self._args, **self._kwargs)
-  File "<trees>/pr856/tests/integration/accelerator/_spawn.py", line 76, in _guard
+  File "<path>", line 76, in _guard
     worker(rank, world_size, init_method, *args)
-  File "<trees>/pr856/tests/integration/accelerator/model_executor/test_qwen_batched_prompts_ulysses.py", line 71, in _worker
+  File "<path>", line 314, in _bootstrap
+    self.run()
+  File "<path>", line 71, in _worker
     pytest.skip("neither AITER FAv3 nor AITER MHA v4 BF16 is available")
-  File "<venv>/lib/python3.12/site-packages/_pytest/outcomes.py", line 138, in __call__
+  File "<path>", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "<path>", line 138, in __call__
     raise Skipped(msg=reason, allow_module_level=allow_module_level)
-Skipped: neither AITER FAv3 nor AITER MHA v4 BF16 is available
-Process SpawnProcess-88:
-Traceback (most recent call last):
-  File "<home>/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "<home>/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "<trees>/pr856/tests/integration/accelerator/_spawn.py", line 76, in _guard
+  File "<path>", line 76, in _guard
     worker(rank, world_size, init_method, *args)
-  File "<trees>/pr856/tests/integration/accelerator/model_executor/test_qwen_batched_prompts_ulysses.py", line 71, in _worker
+Skipped: neither AITER FAv3 nor AITER MHA v4 BF16 is available
+  File "<path>", line 71, in _worker
     pytest.skip("neither AITER FAv3 nor AITER MHA v4 BF16 is available")
-  File "<venv>/lib/python3.12/site-packages/_pytest/outcomes.py", line 138, in __call__
+  File "<path>", line 138, in __call__
     raise Skipped(msg=reason, allow_module_level=allow_module_level)
 Skipped: neither AITER FAv3 nor AITER MHA v4 BF16 is available
 =============================== warnings summary ===============================
-../../xdit-env/lib/python3.12/site-packages/huggingface_hub/constants.py:302
-  <venv>/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
-    warnings.warn(
-
 ../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
 ../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
 ../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
 ../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
 ../../xdit-env/lib/python3.12/site-packages/torch/jit/_script.py:1488
-  <venv>/lib/python3.12/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  <path>:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ============================
 FAILED tests/integration/accelerator/model_executor/test_qwen_batched_prompts_ulysses.py::test_a_padded_prompt_batch_matches_one_call_per_prompt[2]
-======= 1 failed, 43 passed, 37 skipped, 6 warnings in 817.91s (0:13:37) =======
+======= 1 failed, 44 passed, 38 skipped, 5 warnings in 841.90s (0:14:01) =======
