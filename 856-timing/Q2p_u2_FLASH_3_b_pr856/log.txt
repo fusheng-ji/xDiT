@@ -2,186 +2,189 @@
 *****************************************
 Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
 *****************************************
-DEBUG 11-20 15:52:03 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-DEBUG 11-20 15:52:03 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
-WARNING 11-20 15:52:03 [args.py:1839] Distributed environment is not initialized. Initializing...
-DEBUG 11-20 15:52:03 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
-WARNING 11-20 15:52:03 [args.py:1839] Distributed environment is not initialized. Initializing...
-DEBUG 11-20 15:52:03 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
-INFO 11-20 15:52:04 [config.py:221] Pipeline patch number not set, using default value 1
-INFO 11-20 15:52:04 [config.py:221] Pipeline patch number not set, using default value 1
-INFO 11-20 15:52:04 [runner_utils.py:31] Model Runner Arguments:
-INFO 11-20 15:52:04 [runner_utils.py:31]   model: Qwen-Image
-INFO 11-20 15:52:04 [runner_utils.py:31]   lora_path: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   lora_weight_name: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   lora_scale: 1.0
-INFO 11-20 15:52:04 [runner_utils.py:31]   vdn_transformer_dir: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vdn_window_backend: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_parallel_vae: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_torch_compile: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   attention_backend: FLASH_3
-INFO 11-20 15:52:04 [runner_utils.py:31]   cross_attention_backend: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   mha_v4_kv_splits: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   attention_a2a: none
-INFO 11-20 15:52:04 [runner_utils.py:31]   attention_a2a_hadamard: auto
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_cfg_parallel: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   data_parallel_degree: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   ulysses_degree: 2
-INFO 11-20 15:52:04 [runner_utils.py:31]   ring_degree: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   pipefusion_parallel_degree: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_pipeline_patch: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   attn_layer_num_for_pp: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   warmup_steps: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   tensor_parallel_degree: 1
-INFO 11-20 15:52:04 [config.py:221] Pipeline patch number not set, using default value 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   text_encoder_tp_degree: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   fully_shard_degree: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   fully_shard_components: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   reshard_after_forward: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   memory_efficient_sharding: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   memory_efficient_replicated_load: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   height: 1024
-INFO 11-20 15:52:04 [runner_utils.py:31]   width: 1024
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_frames: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   prompt: ['A red fox in the snow.', 'A weathered fisherman mends a bright orange net on the wooden pier of a small harbor at sunrise, gulls circling above the moored boats, soft golden light, misty water, detailed photograph, 35mm film.']
-INFO 11-20 15:52:04 [runner_utils.py:31]   negative_prompt: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_inference_steps: 20
-INFO 11-20 15:52:04 [runner_utils.py:31]   max_sequence_length: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   seed: 42
-INFO 11-20 15:52:04 [runner_utils.py:31]   guidance_scale: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   guidance_scale_2: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   flow_shift: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   enable_sequential_cpu_offload: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   enable_model_cpu_offload: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   enable_group_cpu_offload: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   group_offload_low_cpu_mem: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   enable_tiling: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   enable_slicing: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   vae_tile_size_height: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vae_tile_size_width: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vae_tile_overlap_height: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vae_tile_overlap_width: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   gemm_quantization: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   gemm_config: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_int8_gemms: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_fp8_gemms: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_fp8_text_encoder: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_fp4_gemms: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   fp8_precision_override_prefix_patterns: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   fp8_precision_override_suffix_patterns: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   ulysses_a2a: default
-INFO 11-20 15:52:04 [runner_utils.py:31]   ulysses_sdma_head_groups: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   ulysses_sdma_group_streams: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   ulysses_sdma_overlap_qkv: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_fp8_comms: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   fp8_comms_scale: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   fp8_comms_safety_factor: 0.85
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_iterations: 3
-INFO 11-20 15:52:04 [runner_utils.py:31]   determinism_check: 0
-INFO 11-20 15:52:04 [runner_utils.py:31]   determinism_check_report_ranks: last
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile_wait: 2
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile_warmup: 2
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile_active: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile_capture_phase: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   profile_with_stack: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   warmup_calls: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   output_directory: <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856
-INFO 11-20 15:52:04 [runner_utils.py:31]   input_images: []
-INFO 11-20 15:52:04 [runner_utils.py:31]   resize_input_images: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   task: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   batch_size: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   dataset_path: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_hybrid_attn_schedule: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   hybrid_attn_low_precision_backend: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   hybrid_attn_high_precision_backend: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_hybrid_attn_high_precision_steps: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   hybrid_attn_schedule: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_hybrid_gemm_schedule: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   num_hybrid_gemm_high_precision_steps: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_vae_channels_last_format: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_ssta_sparse_text_to_image: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   spargeattn_simthreshold: 0.3
-INFO 11-20 15:52:04 [runner_utils.py:31]   spargeattn_cdfthreshold: 0.92
-INFO 11-20 15:52:04 [runner_utils.py:31]   spargeattn_reorder_sequence: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_spargeattn_static_block_mask: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_sparseattn_head_balance: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_spargeattn_head_balance: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   sparseattn_block_size: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   solattn_beta: 0.5
-INFO 11-20 15:52:04 [runner_utils.py:31]   solattn_beta_schedule: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   solattn_tilt_rank: 0
-INFO 11-20 15:52:04 [runner_utils.py:31]   sol_attn_tau: 0.2
-INFO 11-20 15:52:04 [runner_utils.py:31]   sol_attn_thresh_type: exact
-INFO 11-20 15:52:04 [runner_utils.py:31]   sol_attn_kv_splits: auto
-INFO 11-20 15:52:04 [runner_utils.py:31]   sol_attn_sink_tokens: 0
-INFO 11-20 15:52:04 [runner_utils.py:31]   sol_attn_sink_start: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_block_size: 128
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_top_k: 1
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_top_k_ratio: 0.0
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_drop_rates: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_prob_threshold: 0.9
-INFO 11-20 15:52:04 [runner_utils.py:31]   bsa_sparsity: 0.75
-INFO 11-20 15:52:04 [runner_utils.py:31]   bsa_cdf_threshold: 0.2
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_reorder_sequence: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_vsa_static_block_mask: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_vsa_first_frame_mask: True
-INFO 11-20 15:52:04 [runner_utils.py:31]   vsa_collect_density: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   distilled_transformer_path: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   distilled_transformer_2_path: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   audio_prompt: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_teacache: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   use_fbcache: False
-INFO 11-20 15:52:04 [runner_utils.py:31]   cache_method: None
-INFO 11-20 15:52:04 [runner_utils.py:31]   cache_config: None
-INFO 11-20 15:52:04 [runner_utils.py:31] Parameter 'guidance_scale' not specified. Using model-specific default value: 0.0
-INFO 11-20 15:52:04 [runner_utils.py:31] Initializing model: Qwen-Image
-INFO 11-20 15:52:04 [config.py:221] Pipeline patch number not set, using default value 1
-INFO 11-20 15:52:04 [runner_utils.py:31] Loading model pipeline...
+DEBUG 11-20 19:49:40 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+DEBUG 11-20 19:49:40 [runner_utils.py:333] torchao Float8Tensor FSDP2 patches skipped (ModuleNotFoundError): No module named 'torchao'
+WARNING 11-20 19:49:41 [args.py:1855] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 19:49:41 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+WARNING 11-20 19:49:41 [args.py:1855] Distributed environment is not initialized. Initializing...
+DEBUG 11-20 19:49:41 [parallel_state.py:247] world_size=-1 rank=-1 local_rank=-1 distributed_init_method=env:// backend=nccl
+INFO 11-20 19:49:41 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 19:49:41 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 19:49:41 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 19:49:41 [runner_utils.py:31] Model Runner Arguments:
+INFO 11-20 19:49:41 [runner_utils.py:31]   model: Qwen-Image
+INFO 11-20 19:49:41 [runner_utils.py:31]   lora_path: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   lora_weight_name: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   lora_scale: 1.0
+INFO 11-20 19:49:41 [runner_utils.py:31]   vdn_transformer_dir: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vdn_window_backend: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_parallel_vae: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_torch_compile: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   attention_backend: FLASH_3
+INFO 11-20 19:49:41 [runner_utils.py:31]   cross_attention_backend: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   mha_v4_kv_splits: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   attention_a2a: none
+INFO 11-20 19:49:41 [runner_utils.py:31]   attention_a2a_hadamard: auto
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_cfg_parallel: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   data_parallel_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   ulysses_degree: 2
+INFO 11-20 19:49:41 [runner_utils.py:31]   ring_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   pipefusion_parallel_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_pipeline_patch: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   attn_layer_num_for_pp: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   warmup_steps: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   tensor_parallel_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   text_encoder_tp_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   fully_shard_degree: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   fully_shard_components: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   reshard_after_forward: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   memory_efficient_sharding: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   memory_efficient_replicated_load: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   height: 1024
+INFO 11-20 19:49:41 [runner_utils.py:31]   width: 1024
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_frames: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   prompt: ['A red fox in the snow.', 'A weathered fisherman mends a bright orange net on the wooden pier of a small harbor at sunrise, gulls circling above the moored boats, soft golden light, misty water, detailed photograph, 35mm film.']
+INFO 11-20 19:49:41 [runner_utils.py:31]   negative_prompt: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_inference_steps: 20
+INFO 11-20 19:49:41 [runner_utils.py:31]   max_sequence_length: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   seed: 42
+INFO 11-20 19:49:41 [runner_utils.py:31]   guidance_scale: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   guidance_scale_2: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   flow_shift: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   enable_sequential_cpu_offload: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   enable_model_cpu_offload: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   enable_group_cpu_offload: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   group_offload_low_cpu_mem: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   enable_tiling: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   enable_slicing: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   vae_tile_size_height: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vae_tile_size_width: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vae_tile_overlap_height: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vae_tile_overlap_width: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   gemm_quantization: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   gemm_config: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_int8_gemms: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_fp8_gemms: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_fp8_text_encoder: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_fp4_gemms: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   fp8_precision_override_prefix_patterns: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   fp8_precision_override_suffix_patterns: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   ulysses_a2a: default
+INFO 11-20 19:49:41 [runner_utils.py:31]   ulysses_sdma_head_groups: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   ulysses_sdma_group_streams: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   ulysses_sdma_overlap_qkv: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_fp8_comms: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   fp8_comms_scale: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   fp8_comms_safety_factor: 0.85
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_iterations: 3
+INFO 11-20 19:49:41 [runner_utils.py:31]   determinism_check: 0
+INFO 11-20 19:49:41 [runner_utils.py:31]   determinism_check_report_ranks: last
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile_wait: 2
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile_warmup: 2
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile_active: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile_capture_phase: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   profile_with_stack: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   warmup_calls: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   output_directory: <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856
+INFO 11-20 19:49:41 [runner_utils.py:31]   input_images: []
+INFO 11-20 19:49:41 [runner_utils.py:31]   resize_input_images: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   task: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   batch_size: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   dataset_path: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_hybrid_attn_schedule: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   hybrid_attn_low_precision_backend: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   hybrid_attn_high_precision_backend: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_hybrid_attn_high_precision_steps: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   hybrid_attn_schedule: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_hybrid_gemm_schedule: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   num_hybrid_gemm_high_precision_steps: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_vae_channels_last_format: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   vae_dtype: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_ssta_sparse_text_to_image: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   spargeattn_simthreshold: 0.3
+INFO 11-20 19:49:41 [runner_utils.py:31]   spargeattn_cdfthreshold: 0.92
+INFO 11-20 19:49:41 [runner_utils.py:31]   spargeattn_reorder_sequence: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_spargeattn_static_block_mask: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_sparseattn_head_balance: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_spargeattn_head_balance: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   sparseattn_block_size: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   solattn_beta: 0.5
+INFO 11-20 19:49:41 [runner_utils.py:31]   solattn_beta_schedule: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   solattn_tilt_rank: 0
+INFO 11-20 19:49:41 [runner_utils.py:31]   sol_attn_tau: 0.2
+INFO 11-20 19:49:41 [runner_utils.py:31]   sol_attn_thresh_type: exact
+INFO 11-20 19:49:41 [runner_utils.py:31]   sol_attn_kv_splits: auto
+INFO 11-20 19:49:41 [runner_utils.py:31]   sol_attn_sink_tokens: 0
+INFO 11-20 19:49:41 [runner_utils.py:31]   sol_attn_sink_start: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_block_size: 128
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_top_k: 1
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_top_k_ratio: 0.0
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_drop_rates: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_prob_threshold: 0.9
+INFO 11-20 19:49:41 [runner_utils.py:31]   bsa_sparsity: 0.75
+INFO 11-20 19:49:41 [runner_utils.py:31]   bsa_cdf_threshold: 0.2
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_reorder_sequence: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_vsa_static_block_mask: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_vsa_first_frame_mask: True
+INFO 11-20 19:49:41 [runner_utils.py:31]   vsa_collect_density: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   distilled_transformer_path: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   distilled_transformer_2_path: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   audio_prompt: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_teacache: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   use_fbcache: False
+INFO 11-20 19:49:41 [runner_utils.py:31]   cache_method: None
+INFO 11-20 19:49:41 [runner_utils.py:31]   cache_config: None
+INFO 11-20 19:49:41 [runner_utils.py:31] Parameter 'guidance_scale' not specified. Using model-specific default value: 0.0
+INFO 11-20 19:49:41 [runner_utils.py:31] Initializing model: Qwen-Image
+INFO 11-20 19:49:41 [config.py:221] Pipeline patch number not set, using default value 1
+INFO 11-20 19:49:41 [runner_utils.py:31] Loading model pipeline...
 <path>/xdit-env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
   warnings.warn(
 <path>/xdit-env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
   warnings.warn(
 The config attributes {'pooled_projection_dim': 768} were passed to xFuserQwenImageTransformerWrapper, but are not expected and will be ignored. Please verify your config.json configuration file.
-Loading checkpoint shards:   0%|          | 0/9 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 6/9 [00:00<00:00, 56.58it/s]Loading checkpoint shards: 100%|██████████| 9/9 [00:00<00:00, 59.94it/s]
+Loading checkpoint shards:   0%|          | 0/9 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 6/9 [00:00<00:00, 57.64it/s]Loading checkpoint shards: 100%|██████████| 9/9 [00:00<00:00, 61.04it/s]
 <path>/xdit-env/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
   deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
 <path>/xdit-env/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
   deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
 Couldn't connect to the Hub: Cannot reach https://huggingface.co/api/models/Qwen/Qwen-Image: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable..
 Will try to load from local cache.
-Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s][transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  40%|████      | 2/5 [00:00<00:00,  9.35it/s][transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
+[transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
 [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
 
-Loading weights:   0%|          | 0/729 [00:00<?, ?it/s][A[transformers] Qwen2_5_VLConfig got `key=rope_scaling` in kwargs but hasn't set it as attribute. For RoPE standardization you need to set `self.rope_parameters` in model's config. 
-[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
-
-Loading weights:  80%|███████▉  | 583/729 [00:00<00:00, 5829.44it/s][ALoading weights: 100%|██████████| 729/729 [00:00<00:00, 6018.43it/s]
-Loading pipeline components...:  20%|██        | 1/5 [00:00<00:01,  2.94it/s]Loading weights:   0%|          | 0/729 [00:00<?, ?it/s]Loading weights:  75%|███████▌  | 547/729 [00:00<00:00, 5453.49it/s]Loading weights: 100%|██████████| 729/729 [00:00<00:00, 5514.88it/s]
-Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  9.91it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  8.67it/s]
-WARNING 11-20 15:52:05 [logger.py:126] Model parallel is not initialized, initializing...
-INFO 11-20 15:52:05 [runner_utils.py:31] Initializing runtime state...
-WARNING 11-20 15:52:05 [logger.py:126] Using FLASH_3 as attention backend.
-INFO 11-20 15:53:12 [runner_utils.py:31] Model initialization complete.
-INFO 11-20 15:53:12 [runner_utils.py:31] Running model...
-INFO 11-20 15:53:12 [runner_utils.py:31] Warming up model with 1 calls...
-INFO 11-20 15:53:12 [runner_utils.py:31] Warmup iteration 1/1
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:03<00:58,  3.08s/it] 10%|█         | 2/20 [00:03<00:25,  1.41s/it] 15%|█▌        | 3/20 [00:03<00:15,  1.12it/s] 20%|██        | 4/20 [00:03<00:10,  1.55it/s] 25%|██▌       | 5/20 [00:04<00:07,  1.96it/s] 30%|███       | 6/20 [00:04<00:06,  2.32it/s] 35%|███▌      | 7/20 [00:04<00:04,  2.64it/s] 40%|████      | 8/20 [00:04<00:04,  2.90it/s] 45%|████▌     | 9/20 [00:05<00:03,  3.11it/s] 50%|█████     | 10/20 [00:05<00:03,  3.27it/s] 55%|█████▌    | 11/20 [00:05<00:02,  3.38it/s] 60%|██████    | 12/20 [00:06<00:02,  3.47it/s] 65%|██████▌   | 13/20 [00:06<00:01,  3.53it/s] 70%|███████   | 14/20 [00:06<00:01,  3.57it/s] 75%|███████▌  | 15/20 [00:06<00:01,  3.61it/s] 80%|████████  | 16/20 [00:07<00:01,  3.63it/s] 85%|████████▌ | 17/20 [00:07<00:00,  3.64it/s] 90%|█████████ | 18/20 [00:07<00:00,  3.66it/s] 95%|█████████▌| 19/20 [00:07<00:00,  3.66it/s]100%|██████████| 20/20 [00:08<00:00,  3.67it/s]100%|██████████| 20/20 [00:08<00:00,  2.44it/s]
-INFO 11-20 15:53:21 [runner_utils.py:31] Warmup complete.
-INFO 11-20 15:53:21 [runner_utils.py:31] Running iteration 1/3
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.28it/s] 10%|█         | 2/20 [00:00<00:04,  3.91it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.80it/s] 20%|██        | 4/20 [00:01<00:04,  3.75it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.73it/s] 30%|███       | 6/20 [00:01<00:03,  3.71it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.70it/s] 40%|████      | 8/20 [00:02<00:03,  3.70it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.69it/s] 50%|█████     | 10/20 [00:02<00:02,  3.69it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.69it/s] 60%|██████    | 12/20 [00:03<00:02,  3.69it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.68it/s] 70%|███████   | 14/20 [00:03<00:01,  3.68it/s] 75%|███████▌  | 15/20 [00:04<00:01,  3.68it/s] 80%|████████  | 16/20 [00:04<00:01,  3.68it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.68it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.68it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.71it/s]
-INFO 11-20 15:53:27 [runner_utils.py:31] Iteration 1 completed in 5.65s
-INFO 11-20 15:53:27 [runner_utils.py:31] Running iteration 2/3
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.27it/s] 10%|█         | 2/20 [00:00<00:04,  3.91it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.80it/s] 20%|██        | 4/20 [00:01<00:04,  3.75it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.73it/s] 30%|███       | 6/20 [00:01<00:03,  3.71it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.70it/s] 40%|████      | 8/20 [00:02<00:03,  3.70it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.69it/s] 50%|█████     | 10/20 [00:02<00:02,  3.69it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.69it/s] 60%|██████    | 12/20 [00:03<00:02,  3.68it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.68it/s] 70%|███████   | 14/20 [00:03<00:01,  3.68it/s] 75%|███████▌  | 15/20 [00:04<00:01,  3.68it/s] 80%|████████  | 16/20 [00:04<00:01,  3.68it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.68it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.68it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.71it/s]
-INFO 11-20 15:53:33 [runner_utils.py:31] Iteration 2 completed in 5.65s
-INFO 11-20 15:53:33 [runner_utils.py:31] Running iteration 3/3
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.21it/s] 10%|█         | 2/20 [00:00<00:04,  3.88it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.79it/s] 20%|██        | 4/20 [00:01<00:04,  3.74it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.72it/s] 30%|███       | 6/20 [00:01<00:03,  3.71it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.70it/s] 40%|████      | 8/20 [00:02<00:03,  3.69it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.69it/s] 50%|█████     | 10/20 [00:02<00:02,  3.69it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.68it/s] 60%|██████    | 12/20 [00:03<00:02,  3.68it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.68it/s] 70%|███████   | 14/20 [00:03<00:01,  3.68it/s] 75%|███████▌  | 15/20 [00:04<00:01,  3.68it/s] 80%|████████  | 16/20 [00:04<00:01,  3.68it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.68it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.68it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.68it/s]100%|██████████| 20/20 [00:05<00:00,  3.70it/s]
-INFO 11-20 15:53:38 [runner_utils.py:31] Iteration 3 completed in 5.65s
-INFO 11-20 15:53:38 [runner_utils.py:31] Average time over 3 runs: 5.65s
-INFO 11-20 15:53:38 [runner_utils.py:31] Total time spent: 16.96s
-INFO 11-20 15:53:39 [runner_utils.py:31] Output image saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/qwen_image_u2r1_tc_False_1024x1024_0.png
-INFO 11-20 15:53:39 [runner_utils.py:31] Output image saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/qwen_image_u2r1_tc_False_1024x1024_1.png
-INFO 11-20 15:53:39 [runner_utils.py:31] Timings saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/timings.json
-[peak] rank 0 max_memory_allocated 62.093 GiB
-INFO 11-20 15:53:42 [runner_utils.py:31] Cleaned up resources.
-[peak] rank 1 max_memory_allocated 62.093 GiB
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s][ALoading weights:   0%|          | 0/729 [00:00<?, ?it/s]
+Loading weights:  82%|████████▏ | 601/729 [00:00<00:00, 6008.64it/s][ALoading weights:  69%|██████▉   | 505/729 [00:00<00:00, 5041.18it/s]Loading weights: 100%|██████████| 729/729 [00:00<00:00, 6154.52it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  8.62it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00,  8.70it/s]
+WARNING 11-20 19:49:42 [logger.py:126] Model parallel is not initialized, initializing...
+Loading weights: 100%|██████████| 729/729 [00:00<00:00, 5124.37it/s]
+INFO 11-20 19:49:42 [runner_utils.py:31] Initializing runtime state...
+WARNING 11-20 19:49:42 [logger.py:126] Using FLASH_3 as attention backend.
+INFO 11-20 19:50:48 [runner_utils.py:31] Shared the timestep modulation of 120 projections out over 2 sequence-parallel ranks: each holds 6.33 GiB of its weights.
+INFO 11-20 19:50:48 [runner_utils.py:31] Model initialization complete.
+INFO 11-20 19:50:48 [runner_utils.py:31] Running model...
+INFO 11-20 19:50:48 [runner_utils.py:31] Warming up model with 1 calls...
+INFO 11-20 19:50:48 [runner_utils.py:31] Warmup iteration 1/1
+WARNING 11-20 19:50:49 [logger.py:126] Switched pipe.transformer from training to eval mode. xFuserQwenImageModel should load them with .eval().
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:02<00:51,  2.73s/it] 10%|█         | 2/20 [00:02<00:22,  1.26s/it] 15%|█▌        | 3/20 [00:03<00:13,  1.24it/s] 20%|██        | 4/20 [00:03<00:09,  1.69it/s] 25%|██▌       | 5/20 [00:03<00:07,  2.10it/s] 30%|███       | 6/20 [00:04<00:05,  2.47it/s] 35%|███▌      | 7/20 [00:04<00:04,  2.78it/s] 40%|████      | 8/20 [00:04<00:03,  3.03it/s] 45%|████▌     | 9/20 [00:04<00:03,  3.22it/s] 50%|█████     | 10/20 [00:05<00:02,  3.36it/s] 55%|█████▌    | 11/20 [00:05<00:02,  3.47it/s] 60%|██████    | 12/20 [00:05<00:02,  3.55it/s] 65%|██████▌   | 13/20 [00:05<00:01,  3.61it/s] 70%|███████   | 14/20 [00:06<00:01,  3.65it/s] 75%|███████▌  | 15/20 [00:06<00:01,  3.67it/s] 80%|████████  | 16/20 [00:06<00:01,  3.69it/s] 85%|████████▌ | 17/20 [00:06<00:00,  3.71it/s] 90%|█████████ | 18/20 [00:07<00:00,  3.72it/s] 95%|█████████▌| 19/20 [00:07<00:00,  3.73it/s]100%|██████████| 20/20 [00:07<00:00,  3.73it/s]100%|██████████| 20/20 [00:07<00:00,  2.58it/s]
+INFO 11-20 19:50:58 [runner_utils.py:31] Warmup complete.
+INFO 11-20 19:50:58 [runner_utils.py:31] Running iteration 1/3
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.34it/s] 10%|█         | 2/20 [00:00<00:04,  3.97it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.86it/s] 20%|██        | 4/20 [00:01<00:04,  3.81it/s] 25%|██▌       | 5/20 [00:01<00:03,  3.79it/s] 30%|███       | 6/20 [00:01<00:03,  3.77it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.76it/s] 40%|████      | 8/20 [00:02<00:03,  3.76it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.75it/s] 50%|█████     | 10/20 [00:02<00:02,  3.75it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.75it/s] 60%|██████    | 12/20 [00:03<00:02,  3.74it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.74it/s] 70%|███████   | 14/20 [00:03<00:01,  3.74it/s] 75%|███████▌  | 15/20 [00:03<00:01,  3.74it/s] 80%|████████  | 16/20 [00:04<00:01,  3.74it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.74it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.74it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.77it/s]
+INFO 11-20 19:51:04 [runner_utils.py:31] Iteration 1 completed in 5.56s
+INFO 11-20 19:51:04 [runner_utils.py:31] Running iteration 2/3
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.34it/s] 10%|█         | 2/20 [00:00<00:04,  3.97it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.86it/s] 20%|██        | 4/20 [00:01<00:04,  3.81it/s] 25%|██▌       | 5/20 [00:01<00:03,  3.79it/s] 30%|███       | 6/20 [00:01<00:03,  3.77it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.76it/s] 40%|████      | 8/20 [00:02<00:03,  3.75it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.75it/s] 50%|█████     | 10/20 [00:02<00:02,  3.75it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.75it/s] 60%|██████    | 12/20 [00:03<00:02,  3.75it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.74it/s] 70%|███████   | 14/20 [00:03<00:01,  3.74it/s] 75%|███████▌  | 15/20 [00:03<00:01,  3.74it/s] 80%|████████  | 16/20 [00:04<00:01,  3.74it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.74it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.74it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.77it/s]
+INFO 11-20 19:51:09 [runner_utils.py:31] Iteration 2 completed in 5.57s
+INFO 11-20 19:51:09 [runner_utils.py:31] Running iteration 3/3
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  4.34it/s] 10%|█         | 2/20 [00:00<00:04,  3.97it/s] 15%|█▌        | 3/20 [00:00<00:04,  3.86it/s] 20%|██        | 4/20 [00:01<00:04,  3.81it/s] 25%|██▌       | 5/20 [00:01<00:03,  3.79it/s] 30%|███       | 6/20 [00:01<00:03,  3.77it/s] 35%|███▌      | 7/20 [00:01<00:03,  3.76it/s] 40%|████      | 8/20 [00:02<00:03,  3.75it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.75it/s] 50%|█████     | 10/20 [00:02<00:02,  3.75it/s] 55%|█████▌    | 11/20 [00:02<00:02,  3.75it/s] 60%|██████    | 12/20 [00:03<00:02,  3.74it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.74it/s] 70%|███████   | 14/20 [00:03<00:01,  3.74it/s] 75%|███████▌  | 15/20 [00:03<00:01,  3.74it/s] 80%|████████  | 16/20 [00:04<00:01,  3.74it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.74it/s] 90%|█████████ | 18/20 [00:04<00:00,  3.74it/s] 95%|█████████▌| 19/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.74it/s]100%|██████████| 20/20 [00:05<00:00,  3.77it/s]
+INFO 11-20 19:51:15 [runner_utils.py:31] Iteration 3 completed in 5.56s
+INFO 11-20 19:51:15 [runner_utils.py:31] Average time over 3 runs: 5.56s
+INFO 11-20 19:51:15 [runner_utils.py:31] Total time spent: 16.69s
+INFO 11-20 19:51:15 [runner_utils.py:31] Output image saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/qwen_image_u2r1_tc_False_1024x1024_0.png
+INFO 11-20 19:51:16 [runner_utils.py:31] Output image saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/qwen_image_u2r1_tc_False_1024x1024_1.png
+INFO 11-20 19:51:16 [runner_utils.py:31] Timings saved to <path>/xDiT-h100/../h100-results/856-timing/Q2p_u2_FLASH_3_b_pr856/timings.json
+INFO 11-20 19:51:18 [runner_utils.py:31] Cleaned up resources.
+[peak] rank 1 max_memory_allocated 66.452 GiB
+[peak] rank 0 max_memory_allocated 66.452 GiB
