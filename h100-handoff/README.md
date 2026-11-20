@@ -45,6 +45,7 @@ Variables (all optional): `PY` (python to use, default `python`), `OUT`, `TREES`
 bash h100-handoff/run_856.sh          # about 2-4 h
 bash h100-handoff/run_padding.sh 900  # about 1-2 h
 bash h100-handoff/run_padding.sh 901  # about 1 h
+bash h100-handoff/run_timing.sh       # #856 latency and peak memory, about 2-3 h
 ```
 
 Each run can be repeated; the two-GPU runs use ports from 29700 up.
@@ -69,6 +70,10 @@ images. Send the PNGs of #900 too: the PSNR is checked against them by eye.
   larger on the sample with the shorter prompt. Main may also stop with an error on a
   model it does not batch; that is a result too.
 - `856/pytest-1gpu.txt`, `856/pytest-multi.txt`: accelerator tests on the PR head.
+- `856-timing/summary.md`: median latency of three runs after a warm-up for each batch,
+  backend (FA3, FA2) and GPU count, as main / PR / main, with the PR's change against the
+  mean of the two main runs and the spread between those two (the noise floor), plus each
+  side's peak `max_memory_allocated`. Run this with the GPUs otherwise idle.
 - `900/summary.txt`, `901/summary.txt`: PSNR of each two-GPU run against the one-GPU run
   with the same backend. `pr` should be at least as close as `main`; `pr` against
   `nozero` shows what zeroing the pad rows changes under a quantizing backend, where a
